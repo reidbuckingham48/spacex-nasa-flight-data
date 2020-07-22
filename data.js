@@ -15,10 +15,9 @@ function queryLaunches(){
 
 $('.submitBtn').click( function() {
     userChoice = (flightNum.value);
-    console.log(userChoice)
+
     //query launch data
     $.get("https://api.spacexdata.com/v4/launches/" + userChoice).then(function(response) {
-        console.log(response)
 
        $('#flightNumber').empty();
        $('#flightNumber').text(response.flight_number)
@@ -41,8 +40,19 @@ $('.submitBtn').click( function() {
        $('#article').empty();
        $('#article').html("<a href = '" + response.links.article + "'>" +response.links.article + "</a>"+ "<br>" +
        "<a href = '" + response.links.webcast + "'>" +response.links.webcast + "</a>" )
+
+       var rocketID = response.rocket
+       $.get("https://api.spacexdata.com/v4/rockets/" + rocketID).then(function(response) {  
+           console.log(response)  
+           for (var i = 0; i < response.flickr_images.length; i++) {
+            $('#rocketPicture').append("<img src = '" + response.flickr_images[i] + "'>");
+           }              
+           });       
+          
+       })
 })
-})
+
+
 
 // var flightDetails = response[0].details; -
 // var launchDate = response[0].launch_date_local;-
