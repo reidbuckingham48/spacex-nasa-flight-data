@@ -11,33 +11,34 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Data-SpaceX/NASA Flight Comparison</title>  
   </head>
+  
   <body>
 
     <!-- Navbar -->
     <div class="container">
         <nav class="navbar" role="navigation" aria-label="main navigation">
                    <div class="navbar-item is-hoverable navbar-end">
-                       <div class="buttons">
-                  <a href="#"  class="button" style="background-color: #005288; color: white">
+                       <div class="buttons has-addons">
+                  <a href="#"  class="button">
                    Home
                   </a>
-                  <a href="#"  class="button" style="background-color: #005288; color: white">
+                  <a href="#"  class="button">
                    NASA Info
                   </a>
-                  <a href="#"  class="button" style="background-color: #005288; color: white">
+                  <a href="#"  class="button">
                     SpaceX Info
                   </a>
-                  <a href="#"  class="button" style="background-color: #005288; color: white">
+                  <a href="#"  class="button">
                     Flight Data
                   </a>
                 </nav>
 
                 <!-- Page Title -->
         <div class="block">
-           <section class="hero" style="background-color: #a7a9ac">
+           <section class="hero">
           <div class="hero-body">
               <div class="container">
-                  <h1 class="title" style="color: #005288">Hero Title</h1>
+                  <h1 class="title">Hero Title</h1>
                   <h2 class="subtitle">Hero Subtitle</h2>
               </div>
           </div>
@@ -54,21 +55,19 @@
                     </span>
                 </p>
                     <p class="control">
-                        <a href="#"  class="button" style="background-color: #005288; color: white">Submit</a>
+                        <a href="#"  class="button">Submit</a>
                     </p>
                  </div>
             </div>
 
             <!-- Data Results -->
             <div class="block">
-                <table class="table">
+                <table class="table is-fullwidth is-hoverable">
                     <tbody>
                         <tr>
-                            <td>Flight Number</td>
-                            <td>Output</td>
+                            <td><div style="width: 110px">Flight Number</div></td>
+                            <td><div style="width: 300px">Output</div></td>
                         </tr>
-                    </tbody>
-                    <tbody>
                         <tr>
                             <td>Year</td>
                             <td>Output</td>
@@ -93,3 +92,5 @@
                 </table>
                 <script src="data.js"></script>
         </div>
+    </body>
+</html>
