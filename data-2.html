@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Data-SpaceX/NASA Flight Comparison</title>  
+  </head>
+  
+  <body>
+
+    <!-- Navbar -->
+    <div class="container">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+                   <div class="navbar-item is-hoverable navbar-end">
+                       <div class="buttons has-addons">
+                  <a href="#"  class="button">
+                   Home
+                  </a>
+                  <a href="#"  class="button">
+                   NASA Info
+                  </a>
+                  <a href="#"  class="button">
+                    SpaceX Info
+                  </a>
+                  <a href="#"  class="button">
+                    Flight Data
+                  </a>
+                </nav>
+
+                <!-- Page Title -->
+        <div class="block">
+           <section class="hero">
+          <div class="hero-body">
+              <div class="container">
+                  <h1 class="title">Hero Title</h1>
+                  <h2 class="subtitle">Hero Subtitle</h2>
+              </div>
+          </div>
+        </section>
+
+        <!-- Dropdown Menu -->
+        <div class="block">
+            <div class="field has-addons">
+                <p class="control">
+                    <span class="select">
+                        <select id = "flightNum"> 
+                        
+                         </select>
+                    </span>
+                </p>
+                    <p class="control">
+                        <a href="#"  class="button">Submit</a>
+                    </p>
+                 </div>
+            </div>
+
+            <!-- Data Results -->
+            <div class="block">
+                <table class="table is-fullwidth is-hoverable">
+                    <tbody>
+                        <tr>
+                            <td><div style="width: 110px">Flight Number</div></td>
+                            <td><div style="width: 300px">Output</div></td>
+                        </tr>
+                        <tr>
+                            <td>Year</td>
+                            <td>Output</td>
+                         </tr>
+                         <tr>
+                            <td>Date</td>
+                            <td>Output</td>
+                         </tr>
+                         <tr>
+                            <td>Location</td>
+                            <td>Output</td>
+                         </tr>
+                         <tr>
+                            <td>Details</td>
+                            <td>Output</td>
+                         </tr>
+                         <tr>
+                            <td><a href="#">Link</a></td>
+                            <td>Output</td>
+                         </tr>
+                    </tbody>
+                </table>
+                <script src="data.js"></script>
+        </div>
+    </body>
+</html>
