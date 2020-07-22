@@ -42,8 +42,8 @@ $('.submitBtn').click( function() {
        "<a href = '" + response.links.webcast + "'>" +response.links.webcast + "</a>" )
 
        var rocketID = response.rocket
-       $.get("https://api.spacexdata.com/v4/rockets/" + rocketID).then(function(response) {  
-           console.log(response)  
+       $.get("https://api.spacexdata.com/v4/rockets/" + rocketID).then(function(response) { 
+            $('#rocketPicture').empty();
            for (var i = 0; i < response.flickr_images.length; i++) {
             $('#rocketPicture').append("<img src = '" + response.flickr_images[i] + "'>");
            }              
