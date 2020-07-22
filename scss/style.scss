@@ -1,0 +1,38 @@
+@import "_config";
+@import "_utilities";
+
+body {
+    @include set-background($primary-color);
+}
+
+%btn {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 8px 20px;
+    margin: 3px;
+
+    &:hover {
+    transform: scale(.98);
+    }
+}
+
+.navbar {
+    @include set-background($primary-color);
+}
+.button {
+    @extend %btn;
+    @include set-background($secondary-color);
+    }
+
+    .hero {
+       padding: 20px;
+       @include set-background($secondary-color);
+    }
+
+    .block {
+        margin: 50px 0px;
+        }
+
+    .title {
+        color: set-text-color($primary-color)
+        }
