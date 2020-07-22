@@ -16,7 +16,6 @@ body {
     }
 }
 
-
 .button {
     @extend %btn;
     @include set-background($secondary-color);
@@ -34,3 +33,9 @@ body {
     .title {
         color: set-text-color($primary-color)
         }
+
+    .footer {
+        background-color: #005288; 
+        color: white; 
+        margin: 50px 0px 0px 0px;
+    }
