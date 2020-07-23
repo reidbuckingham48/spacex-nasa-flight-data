@@ -2,12 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./index.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="./horizontal-timeline-master/assets/css/style.css">
   <title>Horizontal Timeline | CodyHouse</title>
 </head>
 <body>
+
+   <!-- Navbar -->
+   <div class="container">
+    <nav class="navbar" style="background-color: #005288"  role="navigation" aria-label="main navigation">
+               <div class="navbar-item is-hoverable navbar-end">
+                   <div class="buttons has-addons">
+              <a href="./index.html"  class="button is-small has-text-white" style="background-color: #a7a9ac">
+               Home
+              </a>
+              <a href="./nasa.html"  class="button is-small has-text-white" style="background-color: #a7a9ac">
+               NASA Info
+              </a>
+              <a href="./spacex.html"  class="button is-small has-text-white" style="background-color: #a7a9ac">
+                SpaceX Info
+              </a>
+              <a href="./data.html"  class="button is-small has-text-white" style="background-color: #a7a9ac">
+                Flight Data
+              </a>
+            </nav>
+
 
   <section class="cd-h-timeline js-cd-h-timeline margin-bottom-md">
    
@@ -151,8 +180,34 @@
       </ol>
     </div> <!-- .cd-h-timeline__events -->
   </section>
-  <script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
-  <script src="assets/js/swipe-content.js"></script> <!-- A Vanilla JavaScript plugin to detect touch interactions -->
-  <script src="assets/js/main.js"></script>
+
+  <div class="row">
+    <div class="col-6">
+        <div class="leftside-col">
+            <h2 class="large">The origins of Nasa...</h2>
+            <p class="paragraph">NASA was created in response to the Soviet Union's October 4, 1957 launch of its 
+              first satellite, Sputnik I. The 183-pound, basketball-sized satellite orbited the earth in 98 minutes.
+            </p><hr>
+            <h2>Future Plans...</h2>
+            <a href="#">
+                <i class="nasa-img"></i>Website Link 1</a><br>
+            <a href="#">
+                <i class="nasa-img"></i>Website Link 2</a><br>
+            <a href="#">
+                <i class="nasa-img"></i>Website Link 3</a>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="rightside-col">
+            <img class="nasa-main-img">
+        </div>
+    </div>
+</div>
+
+  <script src="./horizontal-timeline-master/assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+  <script src="./horizontal-timeline-master/assets/js/swipe-content.js"></script> <!-- A Vanilla JavaScript plugin to detect touch interactions -->
+  <script src="./horizontal-timeline-master/assets/js/main.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
