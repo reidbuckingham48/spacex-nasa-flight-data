@@ -1,11 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./index.css">
+    <title>Home: SpaceX/NASA Flight Comparison</title>  
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <div class="container">
+        <nav class="navbar" style="background-color: #005288"  role="navigation" aria-label="main navigation">
+                   <div class="navbar-item is-hoverable navbar-end">
+                       <div class="buttons has-addons">
+                  <a href="./index.html"  class="button is-small has-text-white" style="background-color: #a7a9ac">
+                   Home
+                  </a>
+                  <a href="./nasa.html"  class="button is-small has-text-white" style="background-color: #a7a9ac">
+                   NASA Info
+                  </a>
+                  <a href="./spacex.html"  class="button is-small has-text-white" style="background-color: #a7a9ac">
+                    SpaceX Info
+                  </a>
+                  <a href="./data.html"  class="button is-small has-text-white" style="background-color: #a7a9ac">
+                    Flight Data
+                  </a>
+                </nav>
+
+                <!-- Carousel -->
+                <!DOCTYPE html>
+                <html>
+                  <head>
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
+                    <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+                    <script defer src="scripts.js"></script>
+                  </head>
+                  <body>
+                    <section class="section">
+                      <div id="slider">
+                        <div class="card">
+                          <div class="card-image">
+                            <figure class="image video-container is-16by9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/th5A6ZQ28pE?start=5" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                              <!-- <iframe type="text/html" src="https://youtube/th5A6ZQ28pE" frameborder="0"></iframe> -->
+                            </figure>
+                          </div>
+                          <div class="card-content">
+                            <div class="item__title">
+                              John F. Kennedy
+                            </div>
+                            <div class="item__description">
+                              Moon Speech
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="card">
+                          <div class="card-image">
+                            <figure class="image is-16by9 is-covered">
+                              <img
+                                src="./Index Assets/Dragon.jpg"
+                              />
+                            </figure>
+                          </div>
+                          <div class="card-content">
+                            <div class="item__title">
+                              SpaceX Dragon
+                            </div>
+                            <div class="item__description">
+                              As seen from the International Space Station
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="card">
+                          <div class="card-image">
+                            <figure class="image is-16by9 is-covered">
+                              <img
+                                src="./Index Assets/Apollo Moonwalk.jpg"
+                                alt=""
+                              />
+                            </figure>
+                          </div>
+                          <div class="card-content">
+                            <div class="item__title">
+                             July 20, 1969
+                            </div>
+                            <div class="item__description">
+                              Apollo 11 Moonwalk
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="card">
+                          <div class="card-image">
+                            <figure class="image is-16by9 is-covered">
+                              <img
+                                src="./Index Assets/CRS19.jpg"
+                                alt=""
+                              />
+                            </figure>
+                          </div>
+                          <div class="card-content">
+                            <div class="item__title">
+                              SpaceX CRS 19
+                            </div>
+                            <div class="item__description">
+                              Launching to the International Space Station
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="card">
+                          <div class="card-image">
+                            <figure class="image is-16by9 is-covered">
+                              <img
+                                src="./Index Assets/Gemini.jpg"
+                                alt="Gemini Rocket"
+                              />
+                            </figure>
+                          </div>
+                          <div class="card-content">
+                            <div class="item__title">
+                               September 12, 1966
+                            </div>
+                            <div class="item__description">
+                              Launch of Gemini XI.
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="card">
+                          <div class="card-image">
+                            <figure class="image is-16by9 is-covered">
+                              <img
+                                src="./Index Assets/ISS.jpg"
+                                alt=""
+                              />
+                            </figure>
+                          </div>
+                          <div class="card-content">
+                            <div class="item__title">
+                              View of the Nile River
+                            </div>
+                            <div class="item__description">
+                              From the International Space Station
+                            </div>
+                          </div>
+                        </div>
+                
+                        <div class="card">
+                          <div class="card-image">
+                            <figure class="image is-16by9 is-covered">
+                              <img
+                                src="./Index Assets/Gemini-Earth.jpg"
+                                alt=""
+                              />
+                            </figure>
+                          </div>
+                          <div class="card-content">
+                            <div class="item__title">
+                              September 14, 1966
+                            </div>
+                            <div class="item__description">
+                              Picture of Earth from Gemini XI
+                            </div>
+                          </div>
+                        </div>
+                          
+                      </div>
+                    </section>
+                  </body>
+                </html>
+
+                <!-- Page Title -->
+        <div class="block">
+           <section class="hero">
+          <div class="hero-body">
+              <div class="container">
+                  <h1 class="title">Hero Title</h1>
+                  <h2 class="subtitle">Hero Subtitle</h2>
+              </div>
+          </div>
+        </section>
+                <script type="text/javascript" src="/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.js"></script>
+                <script src="index.js"></script>
+                <script src="indexscripts.js"></script>
+                <script src="data.js"></script>
+
+                <footer class="footer" style="background-color: #005288">
+                  <div class="content has-text-centered">
+                    <p>
+                      <strong style="color: white">University of Kansas Full Stack BootCamp, August 2020</strong> 
+                    </p>
+                  </div>
+                </footer>
+                
 </body>
 </html>
