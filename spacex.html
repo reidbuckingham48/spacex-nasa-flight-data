@@ -1,36 +1,125 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-    <title>SpaceX/NASA Flight Comparison</title>
+  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link rel="stylesheet" href="horizontal-timeline-master/assets/css/style.css">
+  <title>NASA: SpaceX/NASA Flight Data Comparison</title>
 </head>
+<body style="background-color:  #005288">
+    <container>
 
-<body>
-    <div class="container">
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-                   <div class="navbar-item is-hoverable navbar-end">
-                       <div class="buttons">
-                  <a href="./index.html"  class="button" style="background-color: #005288; color: white">
-                   Home
-                  </a>
-                  <a href="./nasa.html"  class="button" style="background-color: #005288; color: white">
-                   NASA Info
-                  </a>
-                  <a href="./spacex.html"  class="button" style="background-color: #005288; color: white">
-                    SpaceX Info
-                  </a>
-                  <a href="./data.html"  class="button" style="background-color: #005288; color: white">
-                    Flight Data
-                  </a>
-                </nav>
 
-        <h1>SpaceX</h1>
-        <hr>
+   <!-- Navbar -->
+   <div class="container">
+    <nav class="navbar" style="background-color: #005288"  role="navigation" aria-label="main navigation">
+               <div class="navbar-item is-hoverable navbar-end">
+                   <div class="buttons has-addons">
+              <a href="./index.html"  class="button is-small has-text-white" style="background-color: #a7a9ac">
+               Home
+              </a>
+              <a href="./nasa.html"  class="button is-small has-text-white" style="background-color: #a7a9ac">
+               NASA Info
+              </a>
+              <a href="./spacex.html"  class="button is-small has-text-white" style="background-color: #a7a9ac">
+                SpaceX Info
+              </a>
+              <a href="./data.html"  class="button is-small has-text-white" style="background-color: #a7a9ac">
+                Flight Data
+              </a>
+            </nav>   
+
+
+  <section class="cd-h-timeline js-cd-h-timeline margin-bottom-md" style="background-color: #005288">
+   
+    <div class="cd-h-timeline__container container">
+      <div class="cd-h-timeline__dates">
+        <div class="cd-h-timeline__line">
+          <ol>
+            <li><a href="#0" data-date="20/07/2020" class="cd-h-timeline__date cd-h-timeline__date--selected">16 Jan</a></li>
+            <li><a href="#0" data-date="28/02/2020" class="cd-h-timeline__date">28 Feb</a></li>
+            <li><a href="#0" data-date="20/04/2014" class="cd-h-timeline__date">20 Mar</a></li>
+            <li><a href="#0" data-date="20/05/2014" class="cd-h-timeline__date">20 May</a></li>
+            <li><a href="#0" data-date="09/07/2014" class="cd-h-timeline__date">09 Jul</a></li>
+            <li><a href="#0" data-date="30/08/2014" class="cd-h-timeline__date">30 Aug</a></li>
+            <li><a href="#0" data-date="15/09/2014" class="cd-h-timeline__date">15 Sep</a></li>
+            <li><a href="#0" data-date="01/11/2014" class="cd-h-timeline__date">01 Nov</a></li>
+            <li><a href="#0" data-date="10/12/2014" class="cd-h-timeline__date">10 Dec</a></li>
+            <li><a href="#0" data-date="19/01/2015" class="cd-h-timeline__date">29 Jan</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">3 Mar</a></li>
+          </ol>
+
+          <span class="cd-h-timeline__filling-line" aria-hidden="true"></span>
+        </div> <!-- .cd-h-timeline__line -->
+      </div> <!-- .cd-h-timeline__dates -->
+        
+      <ul>
+        <li><a href="#0" class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--prev cd-h-timeline__navigation--inactive">Prev</a></li>
+        <li><a href="#0" class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--next">Next</a></li>
+      </ul>
+    </div> <!-- .cd-h-timeline__container -->
+
+    <div class="cd-h-timeline__events">
+      <ol>
+        <li class="cd-h-timeline__event cd-h-timeline__event--selected text-component">
+          <div class="cd-h-timeline__event-content container">
+            <em class="cd-h-timeline__event-date">January 16th, 2014</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+              Lorem ipsum dolor sit amet
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h6 class="cd-h-timeline__event-title">Event title here</h6>
+            <em class="cd-h-timeline__event-date">February 28th, 2014</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Event title here</h2>
+            <em class="cd-h-timeline__event-date">March 20th, 2014</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Event title here</h2>
+            <em class="cd-h-timeline__event-date">May 20th, 2014</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium"> 
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+            </p>
+          </div>
+        </li>
+
+   
+
+
+    <div class="col-6">
+        <div class="rightside-col">
+            <img class="nasa-main-img">
+        </div>
+    </div>
+</div>
+</container>
 
         <div class="row">
             <div class="col-6">
@@ -61,8 +150,10 @@
 
 
 
-
-        <script src="scripts.js"></script>
+    </div>
+    <script src="horizontal-timeline-master/assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+  <script src="horizontal-timeline-master/assets/js/swipe-content.js"></script> <!-- A Vanilla JavaScript plugin to detect touch interactions -->
+  <script src="horizontal-timeline-master/assets/js/main.js"></script>
+  <script src="scripts.js"></script>
 </body>
-
 </html>
