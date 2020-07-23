@@ -66,8 +66,7 @@ body {
     }
 
     .hero {
-       padding: 20px;
-       @include set-background($secondary-color);
+      @include set-background($secondary-color);
     }
 
     .block {
