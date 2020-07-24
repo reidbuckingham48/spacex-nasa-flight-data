@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+    <script defer src="scripts.js"></script>
     <title>Home: SpaceX/NASA Flight Comparison</title>  
   </head>
   <body>
@@ -19,37 +23,42 @@
         <nav class="navbar" style="background-color: #005288"  role="navigation" aria-label="main navigation">
                    <div class="navbar-item is-hoverable navbar-end">
                        <div class="buttons has-addons">
-                  <a href="./index.html"  class="button is-small has-text-white" style="background-color: #a7a9ac">
+                  <a href="./index.html"  class="button is-medium has-text-white" style="background-color: #a7a9ac">
                    Home
                   </a>
-                  <a href="./nasa.html"  class="button is-small has-text-white" style="background-color: #a7a9ac">
+                  <a href="./nasa.html"  class="button is-medium has-text-white" style="background-color: #a7a9ac">
                    NASA Info
                   </a>
-                  <a href="./spacex.html"  class="button is-small has-text-white" style="background-color: #a7a9ac">
+                  <a href="./spacex.html"  class="button is-medium has-text-white" style="background-color: #a7a9ac">
                     SpaceX Info
                   </a>
-                  <a href="./data.html"  class="button is-small has-text-white" style="background-color: #a7a9ac">
+                  <a href="./data.html"  class="button is-medium has-text-white" style="background-color: #a7a9ac">
                     Flight Data
                   </a>
                 </nav>
 
+                 <!-- Page Title -->
+        <div class="block">
+          <section class="hero">
+         <div class="hero-body">
+                 <h1 class="title" style="margin: 25px">NASA/SpaceX Flight Data Comparison</h1>
+                 <h2 class="subtitle" style="margin: 35px">This interactive site will provide information about NASA, SpaceX and their relative flight data information. Explore the 
+                   history of NASA and SpaceX on the following pages with their interactive timelines that include links for additional organizational
+                   and mission detail. For in-depth details of select NASA flights and all SpaceX flights, pick a mission from the dropdown and click the link in 
+                   the data table. <br>
+                   <br>
+                   This project was created for the University of Kansas Full Stack BootCamp by Jordan Benningfield, Aurora Brune, Reid Buckingham and Julie Schaub.
+                 </h2>
+         </div>
+       </section>
+
                 <!-- Carousel -->
-                <!DOCTYPE html>
-                <html>
-                  <head>
-                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
-                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
-                    <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
-                    <script defer src="scripts.js"></script>
-                  </head>
-                  <body>
                     <section class="section">
                       <div id="slider">
                         <div class="card">
                           <div class="card-image">
                             <figure class="image video-container is-16by9">
                               <iframe width="560" height="315" src="https://www.youtube.com/embed/th5A6ZQ28pE?start=5" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                              <!-- <iframe type="text/html" src="https://youtube/th5A6ZQ28pE" frameborder="0"></iframe> -->
                             </figure>
                           </div>
                           <div class="card-content">
@@ -174,34 +183,24 @@
                             </div>
                           </div>
                         </div>
-                          
-                      </div>
+                       </div>
                     </section>
                   </body>
                 </html>
 
-                <!-- Page Title -->
-        <div class="block">
-           <section class="hero">
-          <div class="hero-body">
-              <div class="container">
-                  <h1 class="title">Hero Title</h1>
-                  <h2 class="subtitle">Hero Subtitle</h2>
-              </div>
-          </div>
-        </section>
-                <script type="text/javascript" src="/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.js"></script>
-                <script src="index.js"></script>
-                <script src="indexscripts.js"></script>
-                <script src="data.js"></script>
-
                 <footer class="footer" style="background-color: #005288">
                   <div class="content has-text-centered">
                     <p>
-                      <strong style="color: white">University of Kansas Full Stack BootCamp, August 2020</strong> 
+                      <strong style="color: white">University of Kansas Full Stack BootCamp, August 2020 / Created by Jordan Benningfield, Aurora Brune, Reid Buckingham, Julie Schaub</strong> 
                     </p>
                   </div>
                 </footer>
                 
 </body>
+      
+<script type="text/javascript" src="/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.js"></script>
+<script src="index.js"></script>
+<script src="indexscripts.js"></script>
+<script src="data.js"></script>
+
 </html>
