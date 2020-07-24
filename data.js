@@ -54,6 +54,8 @@ $('.submitSpacexBtn').click( function() {
 
 
 
+
+
 // var flightDetails = response[0].details; -
 // var launchDate = response[0].launch_date_local;-
 // var launchYear = response[0].launch_year; - could not find
