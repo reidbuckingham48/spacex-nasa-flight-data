@@ -69,32 +69,23 @@ method: "GET"
         method: "GET"
         }).then(function(response) {
         console.log(response);
+        $('#id').empty();
+        $('#id').text(response.project.id)
+
+        $('#startDate').empty();
+        $('#startDate').text(response.project.startDate)
+
+        $('#endDate').empty();
+        $('#endDate').text(response.project.endDate)
+
+        $('#description').empty();
+        $('#description').text(response.project.description)
+
+        $('#status').empty();
+        $('#status').text(response.project.status)
         })
 });
 })
 
 
-
-
-
-// var flightDetails = response[0].details; -
-// var launchDate = response[0].launch_date_local;-
-// var launchYear = response[0].launch_year; - could not find
-// var articleLink = response[0].links.article_link; - links.article
-// var launchSite = response[0].launch_site.site_name_long; - could not find
-// var flightDetailsText= $("<p>");
-// var launchDateText = $("<p>");
-// var launchYearText= $("<p>");
-// var articleLinkText= $("<p>");
-// var launchSiteText = $("<p>");
-// flightDetailsText.text(flightDetails);
-// launchDateText.text(launchDate);
-// launchYearText.text(launchYear);
-// articleLinkText.text(articleLink);
-// launchSiteText.text(launchSite);
-// $("#text").append(flightDetailsText);
-// $("#text").append(launchDateText);
-// $("#text").append(launchYearText);
-// $("#text").append(articleLinkText);
-// $("#text").append(launchSiteText);
 
