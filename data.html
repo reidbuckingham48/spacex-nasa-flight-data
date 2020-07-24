@@ -18,13 +18,14 @@
     <div class="container">
         <nav class="navbar" style="background-color: #005288"  role="navigation" aria-label="main navigation">
                    <div class="navbar-item is-hoverable navbar-end">
-                       <div class="buttons has-addons">
+
                   <a href="./index.html"  class="button is-small">
                    Home
                   </a>
                   <a href="./nasa.html"  class="button is-small">
                    NASA Info
                   </a>
+
                   <a href="spacex.html"  class="button is-small">
                     SpaceX Info
                   </a>
@@ -41,56 +42,63 @@
                 </div>
 
         <!-- NASA Flight Data -->
+
+        <div class="field has-addons">
+                <p class="control">
+                    <button class="button submitNasaBtn">Generate Project ID</button>
+                </p>
+             </div>
+        </div>
+
         <div class="block">
             <table class="table is-fullwidth is-hoverable">
                 <tbody>
                     <tr>
                         <th><div style="width: 50px"></div>NASA Project Data</div></th>
                     <tr>
-                        <td>Flight Number</td>
-                        <td id = 'flightNumber'><div style="width: 150px">Output</td>
+                        <td>Project ID</td>
+                        <td id = 'id'><div style="width: 150px">Output</td>
                     </tr>
                     <tr>
-                        <td>Name</td>
-                        <td id = 'name'>Output</td>
+                        <td>Start Date</td>
+                        <td id = 'startDate'>Output</td>
                      </tr>
                      <tr>
-                        <td>Date</td>
-                        <td id = 'date'>Output</td>
+                        <td>End Date</td>
+                        <td id = 'endDate'>Output</td>
                      </tr>
                      <tr>
-                        <td>Location</td>
-                        <td id = 'location'>Output</td>
+                        <td>Description</td>
+                        <td id = 'description'>Output</td>
                      </tr>
                      <tr>
-                        <td>Details</td>
-                        <td id = 'details'>Output</td>
-                     </tr>
-                     <tr>
-                        <td><a href="#">Links</a></td>
-                        <td id = 'article'>Output</td>
+                        <td>Status</td>
+                        <td id = 'status'>Output</td>
                      </tr>
                 </tbody>
             </table>
 
-            <div class="field has-addons">
-                <p class="control">
-                    <span class="select">
-                        <select id = "flightNum"> 
-                        
-                         </select>
-                    </span>
-                </p>
-                    <p class="control">
-                        <button class="button submitNasaBtn">Submit</button>
-                    </p>
-                 </div>
-            </div>
+
 
             <!-- Data Results -->
             <div class="block">
 
         <!-- SpaceX Flight Data -->
+
+        <div class="field has-addons">
+            <p class="control">
+                <span class="select">
+                    <select id = "flightNum"> 
+                    
+                     </select>
+                </span>
+            </p>
+                <p class="control">
+                    <button class="button submitSpacexBtn">Submit</button>
+                </p>
+             </div>
+        </div>
+        
         <div class="block">
             <table class="table is-fullwidth is-hoverable">
                 <tbody>
@@ -123,26 +131,13 @@
                 </tbody>
             </table>
 
-            <div class="field has-addons">
-                <p class="control">
-                    <span class="select">
-                        <select id = "flightNum"> 
-                        
-                         </select>
-                    </span>
-                </p>
-                    <p class="control">
-                        <button class="button submitSpacexBtn">Submit</button>
-                    </p>
-                 </div>
-            </div>
 
+            <div id = 'rocketPicture'>
+                <!-- rocket images go here -->
+            </div>
             <!-- Data Results -->
             <div class="block">
-
-               
-               
-                <script src="data.js"></script>
+               <script src="data.js"></script>
         </div>
     </body>
 </html>
