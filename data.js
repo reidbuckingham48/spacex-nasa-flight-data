@@ -1,7 +1,6 @@
 queryLaunches();
 function queryLaunches(){
     $.get("https://api.spacexdata.com/v4/launches").then(function(response) {
-        console.log(response)
         // for each flight in response array, creates an option in dropdown menu with flight num, date and time
         for (var i = 0; i < response.length; i++) {
             var dateString = moment.unix(response[i].date_unix).format("YYYY-MM-DD HH:mm");
@@ -13,12 +12,11 @@ function queryLaunches(){
     })
 }
 
-$('.submitBtn').click( function() {
+$('.submitSpacexBtn').click( function() {
     userChoice = (flightNum.value);
-    console.log(userChoice)
+
     //query launch data
     $.get("https://api.spacexdata.com/v4/launches/" + userChoice).then(function(response) {
-        console.log(response)
 
        $('#flightNumber').empty();
        $('#flightNumber').text(response.flight_number)
@@ -41,26 +39,38 @@ $('.submitBtn').click( function() {
        $('#article').empty();
        $('#article').html("<a href = '" + response.links.article + "'>" +response.links.article + "</a>"+ "<br>" +
        "<a href = '" + response.links.webcast + "'>" +response.links.webcast + "</a>" )
-})
+
+       var rocketID = response.rocket
+       $.get("https://api.spacexdata.com/v4/rockets/" + rocketID).then(function(response) { 
+            $('#rocketPicture').empty();
+           for (var i = 0; i < response.flickr_images.length; i++) {
+            $('#rocketPicture').append("<img src = '" + response.flickr_images[i] + "'>");
+           }              
+           });       
+          
+       })
 })
 
-// var flightDetails = response[0].details; -
-// var launchDate = response[0].launch_date_local;-
-// var launchYear = response[0].launch_year; - could not find
-// var articleLink = response[0].links.article_link; - links.article
-// var launchSite = response[0].launch_site.site_name_long; - could not find
-// var flightDetailsText= $("<p>");
-// var launchDateText = $("<p>");
-// var launchYearText= $("<p>");
-// var articleLinkText= $("<p>");
-// var launchSiteText = $("<p>");
-// flightDetailsText.text(flightDetails);
-// launchDateText.text(launchDate);
-// launchYearText.text(launchYear);
-// articleLinkText.text(articleLink);
-// launchSiteText.text(launchSite);
-// $("#text").append(flightDetailsText);
-// $("#text").append(launchDateText);
-// $("#text").append(launchYearText);
-// $("#text").append(articleLinkText);
-// $("#text").append(launchSiteText);
+$('.submitNasaBtn').click( function() {
+
+var nasaAPIKey = "l80wySp5TfuYjJnbHX16YApnaaudSSnfitERu55z";
+var nasaURL = "https://api.nasa.gov/techport/api/projects?api_key=" + nasaAPIKey;
+$.ajax({
+url: nasaURL,
+method: "GET"
+})
+.then(function(response) {   
+    var nasaProject = Math.floor(Math.random() * response.projects.projects.length);
+    var selectedProject = response.projects.projects[nasaProject].id
+    var nasaProjectURL = "https://api.nasa.gov/techport/api/projects/" + selectedProject + "?api_key="+ nasaAPIKey;
+  
+    $.ajax({
+        url: nasaProjectURL,
+        method: "GET"
+        }).then(function(response) {
+        console.log(response);
+        })
+});
+})
+
+
