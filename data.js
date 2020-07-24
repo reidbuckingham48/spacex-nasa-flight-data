@@ -13,7 +13,7 @@ function queryLaunches(){
     })
 }
 
-$('.submitBtn').click( function() {
+$('.submitSpacexBtn').click( function() {
     userChoice = (flightNum.value);
 
     //query launch data
