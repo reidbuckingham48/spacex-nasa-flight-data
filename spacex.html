@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta charset="utf-8">
@@ -16,145 +17,208 @@
   <link rel="stylesheet" href="horizontal-timeline-master/assets/css/style.css">
   <title>SPACEX: SpaceX/NASA Flight Data Comparison</title>
 </head>
+
 <body style="background-color:  #005288">
-    <container>
+  <container>
 
 
-   <!-- Navbar -->
-   <div class="container">
-    <nav class="navbar" style="background-color: #005288"  role="navigation" aria-label="main navigation">
-               <div class="navbar-item is-hoverable navbar-end">
-                   <div class="buttons has-addons">
-              <a href="./index.html"  class="button is-small has-text-white" style="background-color: #a7a9ac">
-               Home
-              </a>
-              <a href="./nasa.html"  class="button is-small has-text-white" style="background-color: #a7a9ac">
-               NASA Info
-              </a>
-              <a href="./spacex.html"  class="button is-small has-text-white" style="background-color: #a7a9ac">
-                SpaceX Info
-              </a>
-              <a href="./data.html"  class="button is-small has-text-white" style="background-color: #a7a9ac">
-                Flight Data
-              </a>
-            </nav>   
+    <!-- Navbar -->
+    <div class="container">
+      <nav class="navbar" style="background-color: #005288" role="navigation" aria-label="main navigation">
+        <div class="navbar-item is-hoverable navbar-end">
+          <div class="buttons has-addons">
+            <a href="./index.html" class="button is-small has-text-white" style="background-color: #a7a9ac">
+              Home
+            </a>
+            <a href="./nasa.html" class="button is-small has-text-white" style="background-color: #a7a9ac">
+              NASA Info
+            </a>
+            <a href="./spacex.html" class="button is-small has-text-white" style="background-color: #a7a9ac">
+              SpaceX Info
+            </a>
+            <a href="./data.html" class="button is-small has-text-white" style="background-color: #a7a9ac">
+              Flight Data
+            </a>
+      </nav>
 
 
-  <section class="cd-h-timeline js-cd-h-timeline margin-bottom-md" style="background-color: #005288">
-   
-    <div class="cd-h-timeline__container container">
-      <div class="cd-h-timeline__dates">
-        <div class="cd-h-timeline__line">
+      <section class="cd-h-timeline js-cd-h-timeline margin-bottom-md" style="background-color: #005288">
+
+        <div class="cd-h-timeline__container container">
+          <div class="cd-h-timeline__dates">
+            <div class="cd-h-timeline__line">
+              <ol>
+                <li><a href="#0" data-date="06/05/2001"
+                    class="cd-h-timeline__date cd-h-timeline__date--selected">06/05/2001</a></li>
+                <li><a href="#0" data-date="05/06/2002" class="cd-h-timeline__date">05/06/2002</a></li>
+                <li><a href="#0" data-date="2006" class="cd-h-timeline__date">2006</a></li>               
+                <li><a href="#0" data-date="28/09/2008" class="cd-h-timeline__date">28/09/2008</a></li>
+                <li><a href="#0" data-date="2011" class="cd-h-timeline__date">2011</a></li>
+                <li><a href="#0" data-date="25/05/2012" class="cd-h-timeline__date">25/05/2012</a></li>
+                <li><a href="#0" data-date="07/09/2014" class="cd-h-timeline__date">07/09/2014</a></li>
+                <li><a href="#0" data-date="06/02/2018" class="cd-h-timeline__date">06/02/2018</a></li>               
+                <li><a href="#0" data-date="2020" class="cd-h-timeline__date">2020</a></li>
+               
+              </ol>
+
+              <span class="cd-h-timeline__filling-line" aria-hidden="true"></span>
+            </div> <!-- .cd-h-timeline__line -->
+          </div> <!-- .cd-h-timeline__dates -->
+
+          <ul>
+            <li><a href="#0"
+                class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--prev cd-h-timeline__navigation--inactive">Prev</a>
+            </li>
+            <li><a href="#0" class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--next">Next</a>
+            </li>
+          </ul>
+        </div> <!-- .cd-h-timeline__container -->
+
+        <div class="cd-h-timeline__events">
           <ol>
-            <li><a href="#0" data-date="06/05/2001" class="cd-h-timeline__date cd-h-timeline__date--selected">06/05/2001</a></li>
-            <li><a href="#0" data-date="05/06/2002" class="cd-h-timeline__date--selected">06/05/2002</a></li>
-            <li><a href="#0" data-date="20/04/2014" class="cd-h-timeline__date">20 Mar</a></li>
-            <li><a href="#0" data-date="20/05/2014" class="cd-h-timeline__date">20 May</a></li>
-            <li><a href="#0" data-date="09/07/2014" class="cd-h-timeline__date">09 Jul</a></li>
-            <li><a href="#0" data-date="30/08/2014" class="cd-h-timeline__date">30 Aug</a></li>
-            <li><a href="#0" data-date="15/09/2014" class="cd-h-timeline__date">15 Sep</a></li>
-            <li><a href="#0" data-date="01/11/2014" class="cd-h-timeline__date">01 Nov</a></li>
-            <li><a href="#0" data-date="10/12/2014" class="cd-h-timeline__date">10 Dec</a></li>
-            <li><a href="#0" data-date="19/01/2015" class="cd-h-timeline__date">29 Jan</a></li>
-            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">3 Mar</a></li>
-          </ol>
+            <li class="cd-h-timeline__event cd-h-timeline__event--selected text-component">
+              <div class="cd-h-timeline__event-content container">
+                <h6 class="cd-h-timeline__event-title">Dreams of a Greenhouse on Mars</h6>
+                <em class="cd-h-timeline__event-date">06/10/2001</em>
+                <p class="cd-h-timeline__event-description color-contrast-medium">
+                  Millionaire, Elon Musk, wanted to put an experimental greenhouse on the planet Mars. He was interested
+                  in increasing public interest in
+                  space travel and improve funding to NASA. He made attempts to purchase three ICBMs from Russia.
+                </p>
+              </div>
+            </li>
 
-          <span class="cd-h-timeline__filling-line" aria-hidden="true"></span>
-        </div> <!-- .cd-h-timeline__line -->
-      </div> <!-- .cd-h-timeline__dates -->
-        
-      <ul>
-        <li><a href="#0" class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--prev cd-h-timeline__navigation--inactive">Prev</a></li>
-        <li><a href="#0" class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--next">Next</a></li>
-      </ul>
-    </div> <!-- .cd-h-timeline__container -->
+            <li class="cd-h-timeline__event text-component">
+              <div class="cd-h-timeline__event-content container">
+                <h6 class="cd-h-timeline__event-title">SpaceX Founded</h6>
+                <em class="cd-h-timeline__event-date">06/05/2002</em>
+                <p class="cd-h-timeline__event-description color-contrast-medium">
+                  Elon Musk realized he could start a company that could open space travel to civilians. </p>
+              </div>
+            </li>
 
-    <div class="cd-h-timeline__events">
-      <ol>
-        <li class="cd-h-timeline__event cd-h-timeline__event--selected text-component">
-          <div class="cd-h-timeline__event-content container">
-            <em class="cd-h-timeline__event-date">06/10/2001</em>
-            <p class="cd-h-timeline__event-description color-contrast-medium"> 
-              Millionaire, Elon Musk, wanted to put an experimental greenhouse on the planet Mars. He was interested in increasing public interest in 
-              space travel and improve funding to NASA. He made attempts to purchase three ICBMs from Russia. 
-            </p>
-          </div>
-        </li>
+            <li class="cd-h-timeline__event text-component">
+              <div class="cd-h-timeline__event-content container">
+                <h2 class="cd-h-timeline__event-title">NASA $278 Million Award</h2>
+                <em class="cd-h-timeline__event-date">2006</em>
+                <p class="cd-h-timeline__event-description color-contrast-medium">
+                  SpaceX wins NASA award to help develop Falcon 9 and Dragon space capsule. </p>
+              </div>
+            </li>
 
-        <li class="cd-h-timeline__event text-component">
-          <div class="cd-h-timeline__event-content container">
-            <h6 class="cd-h-timeline__event-title">SpaceX Founded</h6>
-            <em class="cd-h-timeline__event-date">06/05/2002</em>
-            <p class="cd-h-timeline__event-description color-contrast-medium"> 
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-            </p>
-          </div>
-        </li>
+            <li class="cd-h-timeline__event text-component">
+              <div class="cd-h-timeline__event-content container">
+                <h2 class="cd-h-timeline__event-title">First Privately-developed orbit around Earth</h2>
+                <em class="cd-h-timeline__event-date">28/09/2008</em>
+                <p class="cd-h-timeline__event-description color-contrast-medium">
+                  In September 200, Talcon 1 orbited around the Earth. </p>
+              </div>
+            </li>
 
-        <li class="cd-h-timeline__event text-component">
-          <div class="cd-h-timeline__event-content container">
-            <h2 class="cd-h-timeline__event-title">Event title here</h2>
-            <em class="cd-h-timeline__event-date">March 20th, 2014</em>
-            <p class="cd-h-timeline__event-description color-contrast-medium"> 
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-            </p>
-          </div>
-        </li>
+            <li class="cd-h-timeline__event text-component">
+              <div class="cd-h-timeline__event-content container">
+                <h2 class="cd-h-timeline__event-title">BeginvDevelopment of Falcon Heavy</h2>
+                <em class="cd-h-timeline__event-date">2011</em>
+                <p class="cd-h-timeline__event-description color-contrast-medium">
+                  Falcon Heavy can carry more than twice the load of previous rockets. </p>
+              </div>
+            </li>
 
-        <li class="cd-h-timeline__event text-component">
-          <div class="cd-h-timeline__event-content container">
-            <h2 class="cd-h-timeline__event-title">Event title here</h2>
-            <em class="cd-h-timeline__event-date">May 20th, 2014</em>
-            <p class="cd-h-timeline__event-description color-contrast-medium"> 
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-            </p>
-          </div>
-        </li>
+            <li class="cd-h-timeline__event text-component">
+              <div class="cd-h-timeline__event-content container">
+                <h2 class="cd-h-timeline__event-title">Internatioal Space Station</h2>
+                <em class="cd-h-timeline__event-date">25/05/2012</em>
+                <p class="cd-h-timeline__event-description color-contrast-medium">
+                  SpaceX becomes the first private compnay to dock at the International Space Station. </p>
+              </div>
+            </li>
 
-   
 
+            <li class="cd-h-timeline__event text-component">
+              <div class="cd-h-timeline__event-content container">
+                <h2 class="cd-h-timeline__event-title">Starship Orbital</h2>
+                  <em class="cd-h-timeline__event-date">May 20th, 2014</em>
+                  <p class="cd-h-timeline__event-description color-contrast-medium">
+                    Successful testing of the orbital prototype. </p>
+              </div>
+            </li>
+
+            <li class="cd-h-timeline__event text-component">
+              <div class="cd-h-timeline__event-content container">
+                <h2 class="cd-h-timeline__event-title">Falcon Heavy begins launches</h2>
+                <em class="cd-h-timeline__event-date">06/02/2018</em>
+                <p class="cd-h-timeline__event-description color-contrast-medium">
+                </p>
+              </div>
+            </li>
+
+
+            <li class="cd-h-timeline__event text-component">
+              <div class="cd-h-timeline__event-content container">
+                <h2 class="cd-h-timeline__event-title">Manned space Flight</h2>
+                <em class="cd-h-timeline__event-date">2020</em>
+                <p class="cd-h-timeline__event-description color-contrast-medium">
+                  SpaxeX first manned space flight. </p>
+              </div>
+            </li>
+
+
+
+
+            <div class="col-6">
+              <div class="rightside-col">
+                <img class="nasa-main-img">
+              </div>
+            </div>
+        </div>
+  </container>
+
+  <div class="row">
+    <div class="col-6">
+      <div class="leftside-col">
+        <h2 class="large">The origins of SpaceX...</h2>
+        <p class="paragraph has-text-white">Headquarters are in Hawthorne, California. SpaceX was formed by entrepreneur
+          Elon Musk in the hopes of revolutionizing the aerospace industry and making affordable
+          spaceflight a reality. The company entered the arena with the Falcon 1 rocket, a two-stage
+          liquid-fueled craft designed to send small satellites into orbit.
+
+
+        </p>
+
+        <p class="paragraph has-text-white">
+          “You want to wake up in the morning and think the future is going to be great - and that’s what being a
+          spacefaring civilization is all about. It’s about believing in the future and thinking that the future will
+          be better than the past. And I can’t think of anything more exciting than going out there and being among the
+          stars.”
+          -Elon Musk
+        </p>
+        <hr>
+        <h2>Future Plans...</h2>
+        <a href="#">
+          <i class="spacex-img"></i>Website Link 1</a><br>
+        <a href="#">
+          <i class="spacex-img"></i>Website Link 2</a><br>
+        <a href="#">
+          <i class="spacex-img"></i>Website Link 3</a>
+      </div>
+    </div>
 
     <div class="col-6">
-        <div class="rightside-col">
-            <img class="nasa-main-img">
-        </div>
+      <div class="rightside-col">
+        <img class="spacex-main-img">
+      </div>
     </div>
-</div>
-</container>
-
-        <div class="row">
-            <div class="col-6">
-                <div class="leftside-col">
-                    <h2 class="large">The origins of SpaceX...</h2>
-                    <p class="paragraph has-text-white">Headquarters are in Hawthorne, California. SpaceX was formed by entrepreneur
-                        Elon Musk in the hopes of revolutionizing the aerospace industry and making affordable
-                        spaceflight a reality. The company entered the arena with the Falcon 1 rocket, a two-stage
-                        liquid-fueled craft designed to send small satellites into orbit.
-                    </p>
-                    <hr>
-                    <h2>Future Plans...</h2>
-                    <a href="#">
-                        <i class="spacex-img"></i>Website Link 1</a><br>
-                    <a href="#">
-                        <i class="spacex-img"></i>Website Link 2</a><br>
-                    <a href="#">
-                        <i class="spacex-img"></i>Website Link 3</a>
-                </div>
-            </div>
-
-            <div class="col-6">
-                <div class="rightside-col">
-                    <img class="spacex-main-img">
-                </div>
-            </div>
-        </div>
+  </div>
 
 
 
-    </div>
-    <script src="horizontal-timeline-master/assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
-  <script src="horizontal-timeline-master/assets/js/swipe-content.js"></script> <!-- A Vanilla JavaScript plugin to detect touch interactions -->
+  </div>
+  <script src="horizontal-timeline-master/assets/js/util.js"></script>
+  <!-- util functions included in the CodyHouse framework -->
+  <script src="horizontal-timeline-master/assets/js/swipe-content.js"></script>
+  <!-- A Vanilla JavaScript plugin to detect touch interactions -->
   <script src="horizontal-timeline-master/assets/js/main.js"></script>
   <script src="scripts.js"></script>
 </body>
+
 </html>
