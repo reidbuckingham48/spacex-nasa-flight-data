@@ -49,15 +49,6 @@ $('.submitSpacexBtn').click( function() {
     }
 
     $.ajax(settings).done(function (response) {
-        console.log("new response")
-        console.log(response)
-        console.log(response.currently.apparentTemperature);
-        console.log(response.currently.temperature);
-        console.log(response.currently.humidity);
-        console.log(response.currently.pressure);
-        console.log(response.currently.uvIndex);
-        console.log(response.currently.windBearing);
-        console.log(response.currently.windSpeed);
 
         $('#temperature').empty();
         $('#temperature').text(response.project.temperature)
@@ -67,6 +58,7 @@ $('.submitSpacexBtn').click( function() {
 
         $('#wind-speed').empty();
         $('#wind-speed').text(response.project.windSpeed)
+
         })
     }); 
     
@@ -86,7 +78,6 @@ $('.submitSpacexBtn').click( function() {
            }              
            }); 
        })
-})
 
 $('.submitNasaBtn').click( function() {
 
