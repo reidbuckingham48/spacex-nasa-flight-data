@@ -17,27 +17,30 @@
     <!-- Navbar -->
     <div class="container">
         <nav class="navbar" style="background-color: #005288"  role="navigation" aria-label="main navigation">
-                   <div class="navbar-item is-hoverable navbar-end">
-                       <div class="buttons has-addons">
+            <div class="navbar-item is-hoverable navbar-end">
+
+                <div class="buttons has-addons">
                   <a href="./index.html"  class="button is-medium has-text-white" style="background-color: #a7a9ac">
-                   Home
+                    Home
                   </a>
                   <a href="./nasa.html"  class="button is-medium has-text-white" style="background-color: #a7a9ac">
                    NASA Info
                   </a>
+
                   <a href="./spacex.html"  class="button is-medium has-text-white" style="background-color: #a7a9ac">
                     SpaceX Info
                   </a>
+
                   <a href="./data.html"  class="button is-medium has-text-white" style="background-color: #a7a9ac">
                     Flight Data
                   </a>
-                </nav>
+        </nav>
 
                 <!-- Page Title -->
                 <div class="block">
                     <div class="notification" style="background-color: #005288">
-                        <strong>Mission Flight Data:</strong> 
-                        Choose a mission from the dropdown to view details.
+                        <strong>Nasa Project Data:</strong> 
+                        Choose a random NASA project from over 12000 on file
                 </div>
 
         <!-- NASA Flight Data -->
@@ -47,42 +50,32 @@
                     <tr>
                         <th><div style="width: 50px"></div>NASA Project Data</div></th>
                     <tr>
-                        <td>Flight Number</td>
-                        <td id = 'flightNumber'><div style="width: 150px">Output</td>
+                        <td>Project ID</td>
+                        <td id = 'id'><div style="width: 150px"></td>
                     </tr>
                     <tr>
-                        <td>Name</td>
-                        <td id = 'name'>Output</td>
+                        <td>Start Date</td>
+                        <td id = 'startDate'></td>
                      </tr>
                      <tr>
-                        <td>Date</td>
-                        <td id = 'date'>Output</td>
+                        <td>End Date</td>
+                        <td id = 'endDate'></td>
                      </tr>
                      <tr>
-                        <td>Location</td>
-                        <td id = 'location'>Output</td>
+                        <td>Description</td>
+                        <td id = 'description'></td>
                      </tr>
                      <tr>
-                        <td>Details</td>
-                        <td id = 'details'>Output</td>
-                     </tr>
-                     <tr>
-                        <td><a href="#">Links</a></td>
-                        <td id = 'article'>Output</td>
+                        <td>Status</td>
+                        <td id = 'status'></td>
                      </tr>
                 </tbody>
             </table>
 
             <div class="field has-addons">
-                <p class="control">
-                    <span class="select">
-                        <select id = "flightNum"> 
-                        
-                         </select>
-                    </span>
-                </p>
+               
                     <p class="control">
-                        <button class="button submitNasaBtn">Submit</button>
+                        <button class="button submitNasaBtn">Click for a random NASA project</button>
                     </p>
                  </div>
             </div>
@@ -92,34 +85,59 @@
 
         <!-- SpaceX Flight Data -->
         <div class="block">
+            <div class="notification" style="background-color: #005288">
+                <strong>Mission Flight Data:</strong> 
+                Choose a mission from the dropdown to view details.
+        </div>
+        
+        <div class="block">
             <table class="table is-fullwidth is-hoverable">
                 <tbody>
                     <th><div style="width: 50px"></div>SpaceX Flight Data</div></th>
                     <tr>
                         <td>Flight Number</td>
-                        <td id = 'flightNumber'><div style="width: 150px">Output</td>
+                        <td id = 'flightNumber'><div style="width: 150px"></td>
                     </tr>
                     <tr>
                     <tr>
                         <td>Name</td>
-                        <td id = 'name'>Output</td>
+                        <td id = 'name'></td>
                      </tr>
                      <tr>
                         <td>Date</td>
-                        <td id = 'date'>Output</td>
+                        <td id = 'date'></td>
                      </tr>
                      <tr>
                         <td>Location</td>
-                        <td id = 'location'>Output</td>
+                        <td id = 'location'></td>
                      </tr>
                      <tr>
                         <td>Details</td>
-                        <td id = 'details'>Output</td>
+                        <td id = 'details'></td>
                      </tr>
                      <tr>
                         <td><a href="#">Links</a></td>
-                        <td id = 'article'>Output</td>
+                        <td id = 'article'></td>
                      </tr>
+                </tbody>
+            </table>
+
+                    <!-- SpaceX historial Weather dump -->
+        <div class="block">
+            <table class="table is-fullwidth is-hoverable">
+                <tbody>
+                    <tr><th><div style="width: 50px"></div>The Weather that day...</div></th></tr>
+                    <tr>
+                        <td>Temperature</td>
+                        <td id = 'temperature'><div style="width: 150px"></td>
+                    </tr>
+                    <tr>
+                        <td>Humidity</td>
+                        <td id = 'humidity'></td>
+                     </tr>
+                     <tr>
+                        <td>Wind Speed</td>
+                        <td id = 'wind-speed'></td>
                 </tbody>
             </table>
 
@@ -137,8 +155,12 @@
                  </div>
             </div>
 
+            <div id = 'rocketPicture'>
+                <!-- rocket images go here -->
+            </div>
             <!-- Data Results -->
             <div class="block">
+
 
                 <footer class="footer" style="background-color: #005288">
                     <div class="content has-text-centered">
@@ -151,6 +173,7 @@
                
                
                 <script src="data.js"></script>
+
         </div>
     </body>
 </html>
