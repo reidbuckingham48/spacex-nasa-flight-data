@@ -6,40 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
+     <!-- Link to Google Font -->
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="./style.css">
    
     <title>Home: SpaceX/NASA Flight Comparison</title>  
   </head>
-  <body>
+  <body id="body">
 
     <!-- Navbar -->
     <div class="container">
-        <nav class="navbar" style="background-color: #005288"  role="navigation" aria-label="main navigation">
-                   <div class="navbar-item is-hoverable navbar-end">
-                       <div class="buttons has-addons">
-                  <a href="./index.html"  class="button is-medium has-text-white" style="background-color: #a7a9ac">
-                   Home
-                  </a>
-                  <a href="./nasa.html"  class="button is-medium has-text-white" style="background-color: #a7a9ac">
-                   NASA Info
-                  </a>
-                  <a href="./spacex.html"  class="button is-medium has-text-white" style="background-color: #a7a9ac">
-                    SpaceX Info
-                  </a>
-                  <a href="./data.html"  class="button is-medium has-text-white" style="background-color: #a7a9ac">
-                    Flight Data
-                  </a>
-                </nav>
+      <nav class="navbar" id="navtop" role="navigation" aria-label="main navigation">
+                 <div class="navbar-item is-hoverable navbar-end">
+                     <div class="buttons has-addons">
+                <a href="./index.html" id="navbtn">
+                 Home
+                </a>
+                <a href="./nasa.html" id="navbtn">
+                 NASA Info
+                </a>
+                <a href="./spacex.html" id="navbtn">
+                  SpaceX Info
+                </a>
+                <a href="./data.html" id="navbtn">
+                  Flight Data
+                </a>
+              </nav>
 
                  <!-- Page Title -->
         <div class="block">
           <section class="hero">
          <div class="hero-body">
-                 <h1 class="title" style="margin: 25px">NASA/SpaceX Flight Data Comparison</h1>
-                 <h2 class="subtitle" style="margin: 35px">This interactive site will provide information about NASA, SpaceX and their relative flight data information. Explore the 
+                 <h1 class="title" id="title">NASA/SpaceX Flight Data Comparison</h1>
+                 <h2 class="subtitle" id="subtitle">This interactive site will provide information about NASA, SpaceX and their relative flight data information. Explore the 
                    history of NASA and SpaceX on the following pages with their interactive timelines that include links for additional organizational
                    and mission detail. For in-depth details of select NASA flights and all SpaceX flights, pick a mission from the dropdown and click the link in 
                    the data table. <br>
@@ -184,13 +186,13 @@
                        </div>
                     </section>
                   
-                 <footer class="footer" style="background-color: #005288">
-                  <div class="content has-text-centered">
-                    <p>
-                      <strong style="color: white">University of Kansas Full Stack BootCamp, August 2020 / Created by Jordan Benningfield, Aurora Brune, Reid Buckingham, Julie Schaub</strong> 
-                    </p>
-                  </div>
-                </footer>
+                    <footer class="footer" id="footer">
+                      <div class="content">
+                        <p>
+                          <strong id="footerText">University of Kansas Full Stack BootCamp, August 2020 / Created by Jordan Benningfield, Aurora Brune, Reid Buckingham, Julie Schaub</strong> 
+                        </p>
+                      </div>
+                    </footer>
                 
 </body>
   
