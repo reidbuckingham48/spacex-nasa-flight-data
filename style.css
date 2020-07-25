@@ -1,0 +1,72 @@
+#body, #navtop, #footer, #notification {
+    background-color: #005288;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#navbtn {
+    background-color: #a7a9ac;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+}
+
+#title {
+    margin: 25px;
+    color: #a7a9ac;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#subtitle {
+    margin: 35px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#timelineText, #timelineEvents, #timelineTitle {
+    color: white;
+    font-family: 'Montserrat', sans-serif;    
+}
+
+#timeline {
+    margin-top: 100px;
+}
+
+#timelineEvents {
+    margin-top: 50px;
+}
+
+#timelineTitle {
+    color: #a7a9ac;  
+}
+
+#notification {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+}
+
+#table {
+    width: 100%;
+}
+
+#tableHeader {
+    width: "50px";
+}
+
+#table tr:hover {
+    background-color: #a7a9ac;
+  }
+
+#flightNumber, #nasaProject {
+width: "150px";
+}
+
+#footer {
+    text-align: center;
+   }
+
+  #footerText {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+  } 
+
