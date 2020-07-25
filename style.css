@@ -39,6 +39,16 @@
     color: #a7a9ac;  
 }
 
+#nasaInfo {
+    margin-left: 215px;
+    width: 40%;
+}
+
+#nasaImage {
+    width: 350px;
+    height: 550px;
+}
+
 #notification {
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;

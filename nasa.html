@@ -9,58 +9,61 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-  <!-- <link rel="stylesheet" href="./css/style.css"> -->
   <link rel="stylesheet" href="./index.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
   <link rel="stylesheet" href="horizontal-timeline-master/assets/css/style.css">
+  <!-- Link to Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
   <title>NASA: SpaceX/NASA Flight Data Comparison</title>
 </head>
-<body style="background-color:  #005288">
+<body id="body">
     <container>
 
    <!-- Navbar -->
-   <div class="container">
-    <nav class="navbar" style="background-color: #005288"  role="navigation" aria-label="main navigation">
-               <div class="navbar-item is-hoverable navbar-end">
-                   <div class="buttons has-addons">
-              <a href="./index.html"  class="button is-medium has-text-white" style="background-color: #a7a9ac">
-               Home
-              </a>
-              <a href="./nasa.html"  class="button is-medium has-text-white" style="background-color: #a7a9ac">
-               NASA Info
-              </a>
-              <a href="./spacex.html"  class="button is-medium has-text-white" style="background-color: #a7a9ac">
-                SpaceX Info
-              </a>
-              <a href="./data.html"  class="button is-medium has-text-white" style="background-color: #a7a9ac">
-                Flight Data
-              </a>
-            </nav>
+    <!-- Navbar -->
+    <div class="container">
+      <nav class="navbar" id="navtop" role="navigation" aria-label="main navigation">
+                 <div class="navbar-item is-hoverable navbar-end">
+                     <div class="buttons has-addons">
+                <a href="./index.html" id="navbtn">
+                 Home
+                </a>
+                <a href="./nasa.html" id="navbtn">
+                 NASA Info
+                </a>
+                <a href="./spacex.html" id="navbtn">
+                  SpaceX Info
+                </a>
+                <a href="./data.html" id="navbtn">
+                  Flight Data
+                </a>
+              </nav>
 
 
-  <section class="cd-h-timeline js-cd-h-timeline margin-bottom-md" style="margin: 100px 0px">
+  <section class="cd-h-timeline js-cd-h-timeline margin-bottom-md" id="timeline">
    
     <div class="cd-h-timeline__container container">
       <div class="cd-h-timeline__dates">
         <div class="cd-h-timeline__line">
           <ol>
-            <li><a href="#0" data-date="29/06/1958" class="cd-h-timeline__date cd-h-timeline__date--selected has-text-white">June 29, 1958</a></li>
-            <li><a href="#0" data-date="05/05/1961" class="cd-h-timeline__date has-text-white">May 05, 1961</a></li>
-            <li><a href="#0" data-date="20/02/1962" class="cd-h-timeline__date has-text-white">Feb 20, 1962</a></li>
-            <li><a href="#0" data-date="12/09/1962" class="cd-h-timeline__date has-text-white">Sept 12, 1962</a></li>
-            <li><a href="#0" data-date="03/06/1965" class="cd-h-timeline__date has-text-white">June 03, 1965</a></li>
-            <li><a href="#0" data-date="27/01/1967" class="cd-h-timeline__date has-text-white">Jan 27, 1967</a></li>
-            <li><a href="#0" data-date="20/07/1969" class="cd-h-timeline__date has-text-white">July 20, 1969</a></li>
-            <li><a href="#0" data-date="14/05/1973" class="cd-h-timeline__date has-text-white">May 14, 1973</a></li>
-            <li><a href="#0" data-date="12/04/1981" class="cd-h-timeline__date has-text-white">Apr 12, 1981</a></li>
-            <li><a href="#0" data-date="18/06/1983" class="cd-h-timeline__date has-text-white">June 18, 1983</a></li>
-            <li><a href="#0" data-date="28/01/1986" class="cd-h-timeline__date has-text-white">Jan 28, 1986</a></li>
-            <li><a href="#0" data-date="11/02/2000" class="cd-h-timeline__date has-text-white">Feb 11, 2000</a></li>
-            <li><a href="#0" data-date="01/02/2003" class="cd-h-timeline__date has-text-white">Feb 01, 2003</a></li>
-            <li><a href="#0" data-date="23/12/2008" class="cd-h-timeline__date has-text-white">Dec 23, 2008</a></li>
-            <li><a href="#0" data-date="06/08/2012" class="cd-h-timeline__date has-text-white">Aug 06, 2012</a></li>
-            <li><a href="#0" data-date="18/10/2019" class="cd-h-timeline__date has-text-white">Oct 18, 2019</a></li>
+            <li><a href="#0" data-date="29/06/1958" class="cd-h-timeline__date cd-h-timeline__date--selected" id="timelineText">June 29, 1958</a></li>
+            <li><a href="#0" data-date="05/05/1961" class="cd-h-timeline__date" id="timelineText">May 05, 1961</a></li>
+            <li><a href="#0" data-date="20/02/1962" class="cd-h-timeline__date" id="timelineText">Feb 20, 1962</a></li>
+            <li><a href="#0" data-date="12/09/1962" class="cd-h-timeline__date" id="timelineText">Sept 12, 1962</a></li>
+            <li><a href="#0" data-date="03/06/1965" class="cd-h-timeline__date" id="timelineText">June 03, 1965</a></li>
+            <li><a href="#0" data-date="27/01/1967" class="cd-h-timeline__date" id="timelineText">Jan 27, 1967</a></li>
+            <li><a href="#0" data-date="20/07/1969" class="cd-h-timeline__date" id="timelineText">July 20, 1969</a></li>
+            <li><a href="#0" data-date="14/05/1973" class="cd-h-timeline__date" id="timelineText">May 14, 1973</a></li>
+            <li><a href="#0" data-date="12/04/1981" class="cd-h-timeline__date" id="timelineText">Apr 12, 1981</a></li>
+            <li><a href="#0" data-date="18/06/1983" class="cd-h-timeline__date" id="timelineText">June 18, 1983</a></li>
+            <li><a href="#0" data-date="28/01/1986" class="cd-h-timeline__date" id="timelineText">Jan 28, 1986</a></li>
+            <li><a href="#0" data-date="11/02/2000" class="cd-h-timeline__date" id="timelineText">Feb 11, 2000</a></li>
+            <li><a href="#0" data-date="01/02/2003" class="cd-h-timeline__date" id="timelineText">Feb 01, 2003</a></li>
+            <li><a href="#0" data-date="23/12/2008" class="cd-h-timeline__date" id="timelineText">Dec 23, 2008</a></li>
+            <li><a href="#0" data-date="06/08/2012" class="cd-h-timeline__date" id="timelineText">Aug 06, 2012</a></li>
+            <li><a href="#0" data-date="18/10/2019" class="cd-h-timeline__date" id="timelineText">Oct 18, 2019</a></li>
           </ol>
 
           <span class="cd-h-timeline__filling-line" aria-hidden="true"></span>
@@ -73,11 +76,11 @@
       </ul>
     </div> <!-- .cd-h-timeline__container -->
 
-    <div class="cd-h-timeline__events" style="color: white">
+    <div class="cd-h-timeline__events" id="timelineEvents">
       <ol>
         <li class="cd-h-timeline__event cd-h-timeline__event--selected text-component">
           <div class="cd-h-timeline__event-content container">
-            <h3 class="cd-h-timeline__event-title" style="color: #a7a9ac">The Founding of NASA</h3>
+            <h3 class="cd-h-timeline__event-title" id="timelineTitle">The Founding of NASA</h3>
             <em class="cd-h-timeline__event-date">June 29, 1958</em>
             <p class="cd-h-timeline__event-description color-contrast-light"> 
               <a href="https://en.wikipedia.org/wiki/NASA" target="_blank" style="color: white"></a>NASA</a> is established by President Eisenhower, succeeding the National Advisory Committee for Aeronautics (NACA). The new agency was to have a 
@@ -88,7 +91,7 @@
 
         <li class="cd-h-timeline__event text-component">
           <div class="cd-h-timeline__event-content container">
-            <h3 class="cd-h-timeline__event-title" style="color: #a7a9ac">Project Mercury</h3>
+            <h3 class="cd-h-timeline__event-title" id="timelineTitle">Project Mercury</h3>
             <em class="cd-h-timeline__event-date">May 5, 1961></em>
             <p class="cd-h-timeline__event-description color-contrast-light">  
               Alan Shepard becomes the first man in space on <a href="https://en.wikipedia.org/wiki/Mercury-Redstone_3" target="_blank" style="color: white">Freedom 7.</a>
@@ -99,7 +102,7 @@
 
         <li class="cd-h-timeline__event text-component">
           <div class="cd-h-timeline__event-content container">
-            <h3 class="cd-h-timeline__event-title" style="color: #a7a9ac">First American Orbital Spaceflight</h3>
+            <h3 class="cd-h-timeline__event-title" id="timelineTitle">First American Orbital Spaceflight</h3>
             <em class="cd-h-timeline__event-date">February 20, 1962</em>
             <p class="cd-h-timeline__event-description color-contrast-light">  
             John Glenn is launched into orbit aboard <a href="https://en.wikipedia.org/wiki/Mercury-Atlas_6" target="_blank" style="color: white">Friendship 7.</a>
@@ -111,7 +114,7 @@
 
         <li class="cd-h-timeline__event text-component">
           <div class="cd-h-timeline__event-content container">
-            <h3 class="cd-h-timeline__event-title" style="color: #a7a9ac">"We choose to go to the Moon"</h3>
+            <h3 class="cd-h-timeline__event-title" id="timelineTitle">"We choose to go to the Moon"</h3>
             <em class="cd-h-timeline__event-date">September 12, 1962</em>
             <p class="cd-h-timeline__event-description color-contrast-light">  
             John F. Kennedy makes his "Moon Speech" at Rice University, trying to garner support for the Apollo program, the national 
@@ -123,7 +126,7 @@
 
         <li class="cd-h-timeline__event text-component">
           <div class="cd-h-timeline__event-content container">
-          <h3 class="cd-h-timeline__event-title" style="color: #a7a9ac">First US Spacewalk</h3>
+          <h3 class="cd-h-timeline__event-title" id="timelineTitle">First US Spacewalk</h3>
           <em class="cd-h-timeline__event-date">June 3, 1965</em>
           <p class="cd-h-timeline__event-description color-contrast-light">  
             Aboard Gemini 4, Ed White made the first US spacewalk. White was one of nine men chosen as the second astronuats in 1962.
@@ -133,7 +136,7 @@
 
         <li class="cd-h-timeline__event text-component">
           <div class="cd-h-timeline__event-content container">
-            <h3 class="cd-h-timeline__event-title" style="color: #a7a9ac">Apollo 1 Fire</h3>
+            <h3 class="cd-h-timeline__event-title" id="timelineTitle">Apollo 1 Fire</h3>
           <em class="cd-h-timeline__event-date">January 27, 1967</em>
           <p class="cd-h-timeline__event-description color-contrast-light">  
             <a href="https://en.wikipedia.org/wiki/Apollo_1" target="_blank" style="color: white">Apollo 1</a> experiences a cockpit fire 
@@ -145,7 +148,7 @@
 
         <li class="cd-h-timeline__event text-component">
           <div class="cd-h-timeline__event-content container">
-            <h3 class="cd-h-timeline__event-title" style="color: #a7a9ac">Man on the Moon</h3>
+            <h3 class="cd-h-timeline__event-title" id="timelineTitle">Man on the Moon</h3>
           <em class="cd-h-timeline__event-date">July 20, 1969</em>
           <p class="cd-h-timeline__event-description color-contrast-light">  
             <a href="https://en.wikipedia.org/wiki/Neil_Armstrong" target="_blank" style="color: white">Neil Armstrong</a> 
@@ -156,7 +159,7 @@
 
         <li class="cd-h-timeline__event text-component">
           <div class="cd-h-timeline__event-content container">
-            <h3 class="cd-h-timeline__event-title" style="color: #a7a9ac">Skylab</h3>
+            <h3 class="cd-h-timeline__event-title" id="timelineTitle">Skylab</h3>
             <em class="cd-h-timeline__event-date">May 14, 1973</em>
             <p class="cd-h-timeline__event-description color-contrast-light">  
             Skylab, the first and only independently built US space station, is launched. The capsule was inhabited for 24 weeks
@@ -168,7 +171,7 @@
 
         <li class="cd-h-timeline__event text-component">
           <div class="cd-h-timeline__event-content container">
-            <h3 class="cd-h-timeline__event-title" style="color: #a7a9ac">Columbia's Initial Launch</h3>
+            <h3 class="cd-h-timeline__event-title" id="timelineTitle">Columbia's Initial Launch</h3>
             <em class="cd-h-timeline__event-date">April 12, 1981</em>
             <p class="cd-h-timeline__event-description color-contrast-light"> 
             The first US space shuttle, Columbia, was successfully launched on April 12, 1981, the 20th anniversary of 
@@ -180,7 +183,7 @@
 
         <li class="cd-h-timeline__event text-component">
           <div class="cd-h-timeline__event-content container">
-            <h3 class="cd-h-timeline__event-title" style="color: #a7a9ac">First Woman in Space</h3>
+            <h3 class="cd-h-timeline__event-title" id="timelineTitle">First Woman in Space</h3>
             <em class="cd-h-timeline__event-date">June 18, 1983</em>
             <p class="cd-h-timeline__event-description color-contrast-light">  
               <a href="https://en.wikipedia.org/wiki/Sally_Ride" target="_blank" style="color: white">Sally Ride</a> 
@@ -192,7 +195,7 @@
 
         <li class="cd-h-timeline__event text-component">
           <div class="cd-h-timeline__event-content container">
-            <h3 class="cd-h-timeline__event-title" style="color: #a7a9ac">"Sometimes, when we reach for the stars, we fall short."</h3>
+            <h3 class="cd-h-timeline__event-title" id="timelineTitle">"Sometimes, when we reach for the stars, we fall short."</h3>
             <em class="cd-h-timeline__event-date">January 28, 1986</em>
             <p class="cd-h-timeline__event-description color-contrast-light"> 
               <a href="https://en.wikipedia.org/wiki/Space_Shuttle_Challenger_disasters" target="_blank" style="color: white">Space Shuttle Challenger</a> 
@@ -204,7 +207,7 @@
 
         <li class="cd-h-timeline__event text-component">
           <div class="cd-h-timeline__event-content container">
-            <h3 class="cd-h-timeline__event-title" style="color: #a7a9ac">International Space Station Guests</h3>
+            <h3 class="cd-h-timeline__event-title" id="timelineTitle">International Space Station Guests</h3>
             <em class="cd-h-timeline__event-date">February 11, 2000</em>
             <p class="cd-h-timeline__event-description color-contrast-light">  
             The International Space Station (ISS), a multi-national collaborative project between five participating space agencies: NASA (United States), 
@@ -216,7 +219,7 @@
 
         <li class="cd-h-timeline__event text-component">
           <div class="cd-h-timeline__event-content container">
-            <h3 class="cd-h-timeline__event-title" style="color: #a7a9ac">"My fellow Americans, this day has brought terrible news, and great sadness to our country."</h3>
+            <h3 class="cd-h-timeline__event-title" id="timelineTitle">"My fellow Americans, this day has brought terrible news, and great sadness to our country."</h3>
             <em class="cd-h-timeline__event-date">February 1, 2003</em>
             <p class="cd-h-timeline__event-description color-contrast-light"> 
               <a href="https://en.wikipedia.org/wiki/Space_Shuttle_Columbia_disaster" target="_blank" style="color: white">Space Shuttle Columbia</a> 
@@ -228,7 +231,7 @@
 
         <li class="cd-h-timeline__event text-component">
           <div class="cd-h-timeline__event-content container">
-            <h3 class="cd-h-timeline__event-title" style="color: #a7a9ac">SpaceX Joins NASA</h3>
+            <h3 class="cd-h-timeline__event-title" id="timelineTitle">SpaceX Joins NASA</h3>
             <em class="cd-h-timeline__event-date">December 23, 2008</em>
             <p class="cd-h-timeline__event-description color-contrast-light"> 
               NASA awards SpaceX its Commercial Resupply Services contract, designed to cargo and supplies to the International Space Station (ISS).animationSpeed
@@ -239,7 +242,7 @@
 
         <li class="cd-h-timeline__event text-component">
           <div class="cd-h-timeline__event-content container">
-            <h3 class="cd-h-timeline__event-title" style="color: #a7a9ac">The Martian</h3>
+            <h3 class="cd-h-timeline__event-title" id="timelineTitle">The Martian</h3>
             <em class="cd-h-timeline__event-date">August 6, 2012</em>
             <p class="cd-h-timeline__event-description color-contrast-light">  
               <a href="https://en.wikipedia.org/wiki/Curiosity_(rover)" target="_blank" style="color: white">Mars Rover Curiosity</a> 
@@ -252,7 +255,7 @@
 
         <li class="cd-h-timeline__event text-component">
           <div class="cd-h-timeline__event-content container">
-            <h3 class="cd-h-timeline__event-title" style="color: #a7a9ac">Girl Power</h3>
+            <h3 class="cd-h-timeline__event-title" id="timelineTitle">Girl Power</h3>
             <em class="cd-h-timeline__event-date">October 18, 2019</em>
             <p class="cd-h-timeline__event-description color-contrast-light">  
              The International Space Station had its first all-female spacewalk, with astronauts Jessica Meir and Christina Koch. The spacewalk 
@@ -264,30 +267,27 @@
     </div> <!-- .cd-h-timeline__events -->
   </section>
 
-   <div class="columns is-centered" style="margin-left: 215px">
-      <div class="column">
-      <span class="title" style="color: #a7a9ac">The Origins of NASA</span><br>
-      <p class="mb-4"></p>
-        <span class="subtitle" style="color: white">NASA, the National Aeronautics and Space Act, was created and signed into effect on July 29, 1958 by President Eisenhower in response to the Soviet Union's October 4, 1957 launch of its 
+
+   <div id="nasaInfo">
+      <div id="container">
+      <span class="title" id="title">The Origins of NASA</span><br>
+        <span class="subtitle" id="subtitle">NASA, the National Aeronautics and Space Act, was created and signed into effect on July 29, 1958 by President Eisenhower in response to the Soviet Union's October 4, 1957 launch of its 
         first satellite, Sputnik I. The 183-pound, basketball-sized satellite orbited the earth in 98 minutes. NASA's first administrator was Dr. T. Keith Glennan.</span><br>
         <br>
-        <span class="title" style="color: #a7a9ac">Ongoing Investigations</span><br>
-        <p class="mb-4"></p>
-        <span class="subtitle" style="color: white">NASA is currently conducting in-depth surveys of Mars and Saturn and studies of the Earth and the Sun. 
+        <span class="title" id="title">Ongoing Investigations</span><br>
+         <span class="subtitle" id="subtitle">NASA is currently conducting in-depth surveys of Mars and Saturn and studies of the Earth and the Sun. 
           Other active spacecraft missions are Juno for Jupiter; New Horizons for Jupiter, Pluto and beyond; and Dawn for the asteroid belt.
         </span>
       
-      </div>
-    
-    <div class="column">
-      <img src="./Index Assets/NASA.jpg" alt="Apollo 11 Rocket" width="350" height="550">
+    <div id="nasaImage">
+      <img src="./Index Assets/NASA.jpg" alt="Apollo 11 Rocket">
     </div>
   </div>
 
-  <footer class="footer" style="background-color: #005288">
-    <div class="content has-text-centered">
+  <footer class="footer" id="footer">
+    <div class="content">
       <p>
-        <strong style="color: white">University of Kansas Full Stack BootCamp, August 2020 / Created by Jordan Benningfield, Aurora Brune, Reid Buckingham, Julie Schaub</strong> 
+        <strong id="footerText">University of Kansas Full Stack BootCamp, August 2020 / Created by Jordan Benningfield, Aurora Brune, Reid Buckingham, Julie Schaub</strong> 
       </p>
     </div>
   </footer>
