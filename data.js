@@ -98,7 +98,7 @@ method: "GET"
         }).then(function(response) {
         console.log(response);
         $('#id').empty();
-        $('#id').text(response.project.id)
+        $('#id').text(response.project.id + "  " + response.project.name)
 
         $('#startDate').empty();
         $('#startDate').text(response.project.startDate)
@@ -107,7 +107,7 @@ method: "GET"
         $('#endDate').text(response.project.endDate)
 
         $('#description').empty();
-        $('#description').text(response.project.description)
+        $('#description').html(response.project.description)
 
         $('#status').empty();
         $('#status').text(response.project.status)
