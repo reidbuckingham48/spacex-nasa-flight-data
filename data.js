@@ -30,46 +30,46 @@ $('.submitSpacexBtn').click( function() {
 
         var lat;
         var lon;
+
+        $('#details').empty();
+        $('#details').text(response.details)
+         //possibly add if, else for null values
+        $('#article').empty();
+        $('#article').html("<a href = '" + response.links.article + "'>" +response.links.article + "</a>"+ "<br>" +
+        "<a href = '" + response.links.webcast + "'>" +response.links.webcast + "</a>" )
        //query launchpad information for 'location' field
        $.get("https://api.spacexdata.com/v4/launchpads/" + response.launchpad).then(function(response) {
        $('#location').empty();
        $('#location').text(response.full_name)
        lat = response.latitude;
        lon = response.longitude;
-       //query for Dark Sky historic weather info
-       var settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://dark-sky.p.rapidapi.com/"+ lat +"," + lon + "," + unixDate,
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-host": "dark-sky.p.rapidapi.com",
-            "x-rapidapi-key": ""
-        }
-    }
+      // query for Dark Sky historic weather info    
+      
+      // --- UNCOMMENT AND ADD API KEY FROM COMMENTS FOR HISTORIC WEATHER FUNCTIONALITY ---
+    //    var settings = {
+    //     "async": true,
+    //     "crossDomain": true,
+    //     "url": "https://dark-sky.p.rapidapi.com/"+ lat +"," + lon + "," + unixDate,
+    //     "method": "GET",
+    //     "headers": {
+    //         "x-rapidapi-host": "dark-sky.p.rapidapi.com",
+    //         "x-rapidapi-key": ""  //  <--- add API key here
+    //     }
+    // }
 
-    $.ajax(settings).done(function (response) {
+    // $.ajax(settings).done(function (response) {
+    //     console.log(response)
+    //     $('#temperature').empty();
+    //     $('#temperature').html(response.currently.temperature + '&deg' + "F")
 
-        $('#temperature').empty();
-        $('#temperature').text(response.project.temperature)
+    //     $('#humidity').empty();
+    //     $('#humidity').text(response.currently.humidity + '%')
 
-        $('#humidity').empty();
-        $('#humidity').text(response.project.humidity)
-
-        $('#wind-speed').empty();
-        $('#wind-speed').text(response.project.windSpeed)
-
+    //     $('#wind-speed').empty();
+    //     $('#wind-speed').text(response.currently.windSpeed + ' mph')
+    //     })
+    // --- end of historic weather functionality ---
         })
-    }); 
-    
-        })
-       $('#details').empty();
-       $('#details').text(response.details)
-        //possibly add if, else for null values
-       $('#article').empty();
-       $('#article').html("<a href = '" + response.links.article + "'>" +response.links.article + "</a>"+ "<br>" +
-       "<a href = '" + response.links.webcast + "'>" +response.links.webcast + "</a>" )
-       
        var rocketID = response.rocket
        $.get("https://api.spacexdata.com/v4/rockets/" + rocketID).then(function(response) { 
             $('#rocketPicture').empty();
@@ -78,7 +78,7 @@ $('.submitSpacexBtn').click( function() {
            }              
            }); 
        })
-
+    }); 
 $('.submitNasaBtn').click( function() {
 
 var nasaAPIKey = "l80wySp5TfuYjJnbHX16YApnaaudSSnfitERu55z";
