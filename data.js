@@ -26,28 +26,55 @@ $('.submitSpacexBtn').click( function() {
 
        $('#date').empty();
        $('#date').text(moment.unix(response.date_unix).format("YYYY-MM-DD HH:mm"))
+       var unixDate = response.date_unix
 
+        var lat;
+        var lon;
        //query launchpad information for 'location' field
        $.get("https://api.spacexdata.com/v4/launchpads/" + response.launchpad).then(function(response) {
        $('#location').empty();
        $('#location').text(response.full_name)
-        })
+       lat = response.latitude;
+       lon = response.longitude;
+       //query for Dark Sky historic weather info
+       var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://dark-sky.p.rapidapi.com/"+ lat +"," + lon + "," + unixDate,
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "dark-sky.p.rapidapi.com",
+            "x-rapidapi-key": ""
+        }
+    }
 
+    $.ajax(settings).done(function (response) {
+        console.log("new response")
+        console.log(response)
+        console.log(response.currently.apparentTemperature);
+        console.log(response.currently.temperature);
+        console.log(response.currently.humidity);
+        console.log(response.currently.pressure);
+        console.log(response.currently.uvIndex);
+        console.log(response.currently.windBearing);
+        console.log(response.currently.windSpeed);
+    }); 
+    
+        })
        $('#details').empty();
        $('#details').text(response.details)
         //possibly add if, else for null values
        $('#article').empty();
        $('#article').html("<a href = '" + response.links.article + "'>" +response.links.article + "</a>"+ "<br>" +
        "<a href = '" + response.links.webcast + "'>" +response.links.webcast + "</a>" )
-
+       
        var rocketID = response.rocket
        $.get("https://api.spacexdata.com/v4/rockets/" + rocketID).then(function(response) { 
             $('#rocketPicture').empty();
            for (var i = 0; i < response.flickr_images.length; i++) {
             $('#rocketPicture').append("<img src = '" + response.flickr_images[i] + "'>");
            }              
-           });       
-          
+           }); 
        })
 })
 
