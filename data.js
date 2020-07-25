@@ -58,6 +58,16 @@ $('.submitSpacexBtn').click( function() {
         console.log(response.currently.uvIndex);
         console.log(response.currently.windBearing);
         console.log(response.currently.windSpeed);
+
+        $('#temperature').empty();
+        $('#temperature').text(response.project.temperature)
+
+        $('#humidity').empty();
+        $('#humidity').text(response.project.humidity)
+
+        $('#wind-speed').empty();
+        $('#wind-speed').text(response.project.windSpeed)
+        })
     }); 
     
         })
