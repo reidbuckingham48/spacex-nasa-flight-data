@@ -69,6 +69,20 @@ method: "GET"
         method: "GET"
         }).then(function(response) {
         console.log(response);
+        $('#id').empty();
+        $('#id').text(response.project.id)
+
+        $('#startDate').empty();
+        $('#startDate').text(response.project.startDate)
+
+        $('#endDate').empty();
+        $('#endDate').text(response.project.endDate)
+
+        $('#description').empty();
+        $('#description').text(response.project.description)
+
+        $('#status').empty();
+        $('#status').text(response.project.status)
         })
 });
 })
