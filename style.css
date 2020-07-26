@@ -177,3 +177,7 @@ width: "150px";
     font-size: 16px;
   } 
 
+  #space {
+    overflow: inherit;
+  }
+
