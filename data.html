@@ -8,50 +8,51 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <!-- Link to Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
     <title>Data-SpaceX/NASA Flight Comparison</title>  
   </head>
   
-  <body>
+  <body id="body">
 
-    <!-- Navbar -->
-    <div class="container">
-        <nav class="navbar" style="background-color: #005288"  role="navigation" aria-label="main navigation">
-            <div class="navbar-item is-hoverable navbar-end">
+  <container>
 
-                <div class="buttons has-addons">
-                  <a href="./index.html"  class="button is-medium has-text-white" style="background-color: #a7a9ac">
-                    Home
-                  </a>
-                  <a href="./nasa.html"  class="button is-medium has-text-white" style="background-color: #a7a9ac">
-                   NASA Info
-                  </a>
-
-                  <a href="./spacex.html"  class="button is-medium has-text-white" style="background-color: #a7a9ac">
-                    SpaceX Info
-                  </a>
-
-                  <a href="./data.html"  class="button is-medium has-text-white" style="background-color: #a7a9ac">
-                    Flight Data
-                  </a>
-        </nav>
+ <!-- Navbar -->
+  <!-- Navbar -->
+  <div class="container">
+    <nav class="navbar" id="navtop" role="navigation" aria-label="main navigation">
+               <div class="navbar-item is-hoverable navbar-end">
+                   <div class="buttons has-addons">
+              <a href="./index.html" id="navbtn">
+               Home
+              </a>
+              <a href="./nasa.html" id="navbtn">
+               NASA Info
+              </a>
+              <a href="./spacex.html" id="navbtn">
+                SpaceX Info
+              </a>
+              <a href="./data.html" id="navbtn">
+                Flight Data
+              </a>
+            </nav>
 
                 <!-- Page Title -->
-                <div class="block">
-                    <div class="notification" style="background-color: #005288">
-                        <strong>Nasa Project Data:</strong> 
-                        Choose a random NASA project from over 12000 on file
-                </div>
+                <div class="columns is-mobile" id="dataInfo">
+                    <div class="column">
+                     <span class="title" id="titleData">Nasa Project Data:</span><br>
+                       <span class="subtitle" id="subtitleData">Choose a random NASA project from over 12,000 on file</span>
 
         <!-- NASA Flight Data -->
         <div class="block">
-            <table class="table is-fullwidth is-hoverable">
+            <table class="table" id="table">
                 <tbody>
-                    <tr>
-                        <th><div style="width: 50px"></div>NASA Project Data</div></th>
+                         <th><div id="tableHeader"></div>NASA Project Data</div></th>
                     <tr>
                         <td>Project ID</td>
-                        <td id = 'id'><div style="width: 150px"></td>
+                        <td id = 'id'></td>
                     </tr>
                     <tr>
                         <td>Start Date</td>
@@ -75,7 +76,7 @@
             <div class="field has-addons">
                
                     <p class="control">
-                        <button class="button submitNasaBtn">Click for a random NASA project</button>
+                        <button class="button submitNasaBtn" id="submitNasaBtn">Click for a random NASA project.</button>
                     </p>
                  </div>
             </div>
@@ -84,19 +85,18 @@
             <div class="block">
 
         <!-- SpaceX Flight Data -->
+        <div class="columns is-mobile" id="dataInfo">
+            <div class="column">
+             <span class="title" id="titleData">SpaceX Mission Flight Data:</span><br>
+               <span class="subtitle" id="subtitleData">Choose a mission from the dropdown to view details.</span>
+          
         <div class="block">
-            <div class="notification" style="background-color: #005288">
-                <strong>Mission Flight Data:</strong> 
-                Choose a mission from the dropdown to view details.
-        </div>
-        
-        <div class="block">
-            <table class="table is-fullwidth is-hoverable">
+            <table class="table" id="table">
                 <tbody>
-                    <th><div style="width: 50px"></div>SpaceX Flight Data</div></th>
+                    <th><div id="tableHeader"></div>SpaceX Flight Data</div></th>
                     <tr>
                         <td>Flight Number</td>
-                        <td id = 'flightNumber'><div style="width: 150px"></td>
+                        <td id = 'flightNumber'></td>
                     </tr>
                     <tr>
                     <tr>
@@ -116,7 +116,7 @@
                         <td id = 'details'></td>
                      </tr>
                      <tr>
-                        <td><a href="#">Links</a></td>
+                        <td>Links</td>
                         <td id = 'article'></td>
                      </tr>
                 </tbody>
@@ -124,12 +124,12 @@
 
                     <!-- SpaceX historial Weather dump -->
         <div class="block">
-            <table class="table is-fullwidth is-hoverable">
+            <table class="table" id="table">
                 <tbody>
-                    <tr><th><div style="width: 50px"></div>The Weather that day...</div></th></tr>
+                    <tr><th><div id="tableHeader"></div>The Weather That Day...</th></tr>
                     <tr>
                         <td>Temperature</td>
-                        <td id = 'temperature'><div style="width: 150px"></td>
+                        <td id = 'temperature'></td>
                     </tr>
                     <tr>
                         <td>Humidity</td>
@@ -150,7 +150,7 @@
                     </span>
                 </p>
                     <p class="control">
-                        <button class="button submitSpacexBtn">Submit</button>
+                        <button class="button submitSpacexBtn" id="submitSpacexBtn">Submit</button>
                     </p>
                  </div>
             </div>
@@ -162,10 +162,10 @@
             <div class="block">
 
 
-                <footer class="footer" style="background-color: #005288">
-                    <div class="content has-text-centered">
+                <footer class="footer" id="footer">
+                    <div class="content">
                       <p>
-                        <strong style="color: white">University of Kansas Full Stack BootCamp, August 2020 / Created by Jordan Benningfield, Aurora Brune, Reid Buckingham, Julie Schaub</strong> 
+                        <strong id="footerText">University of Kansas Full Stack BootCamp, August 2020 / Created by Jordan Benningfield, Aurora Brune, Reid Buckingham, Julie Schaub</strong> 
                       </p>
                     </div>
                   </footer>
