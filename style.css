@@ -3,13 +3,86 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-#navbtn {
+#navbtn, #submitNasaBtn, #submitSpacexBtn {
     background-color: #a7a9ac;
     color: white;
     font-family: 'Montserrat', sans-serif;
     padding: 10px;
 }
 
+/* Carousel CSS */
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 694px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/6 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+/* Title of Articles */
 #title {
     margin: 25px;
     color: #a7a9ac;
@@ -39,22 +112,33 @@
     color: #a7a9ac;  
 }
 
-
 #nasaInfo, #spacexInfo {
     margin-left: 215px;
-    width: 40%;
+}
+
+#titleNASA, #titleSpaceX, #titleData {
+    color: #a7a9ac;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    line-height: 2em;
+}
+
+#subtitleNASA, #subtitleSpaceX, #subtitleData {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
 }
 
 #nasaImage, #spacexImage {
     width: 350px;
     height: 550px;
-
 }
 
-a {
+#nasaLinks, #spacexLinks {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     color: white;
+    text-decoration: underline;
 }
 
 #notification {
@@ -64,14 +148,19 @@ a {
 
 #table {
     width: 100%;
+    margin-top: 20px;
 }
 
 #tableHeader {
-    width: "50px";
-}
+    width: 250px;
+   }
 
 #table tr:hover {
     background-color: #a7a9ac;
+  }
+
+  td, #article {
+      color: navy;
   }
 
 #flightNumber, #nasaProject {
