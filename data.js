@@ -1,7 +1,6 @@
 queryLaunches();
 function queryLaunches(){
     $.get("https://api.spacexdata.com/v4/launches").then(function(response) {
-        console.log(response)
         // for each flight in response array, creates an option in dropdown menu with flight num, date and time
         for (var i = 0; i < response.length; i++) {
             var dateString = moment.unix(response[i].date_unix).format("YYYY-MM-DD HH:mm");
@@ -13,12 +12,11 @@ function queryLaunches(){
     })
 }
 
-$('.submitBtn').click( function() {
+$('.submitSpacexBtn').click( function() {
     userChoice = (flightNum.value);
-    console.log(userChoice)
+
     //query launch data
     $.get("https://api.spacexdata.com/v4/launches/" + userChoice).then(function(response) {
-        console.log(response)
 
        $('#flightNumber').empty();
        $('#flightNumber').text(response.flight_number)
@@ -28,39 +26,93 @@ $('.submitBtn').click( function() {
 
        $('#date').empty();
        $('#date').text(moment.unix(response.date_unix).format("YYYY-MM-DD HH:mm"))
+       var unixDate = response.date_unix
 
+        var lat;
+        var lon;
+
+        $('#details').empty();
+        $('#details').text(response.details)
+         //possibly add if, else for null values
+        $('#article').empty();
+        $('#article').html("<a href = '" + response.links.article + "'>" +response.links.article + "</a>"+ "<br>" +
+        "<a href = '" + response.links.webcast + "'>" +response.links.webcast + "</a>" )
        //query launchpad information for 'location' field
        $.get("https://api.spacexdata.com/v4/launchpads/" + response.launchpad).then(function(response) {
        $('#location').empty();
        $('#location').text(response.full_name)
+       lat = response.latitude;
+       lon = response.longitude;
+      // query for Dark Sky historic weather info    
+      
+      // --- UNCOMMENT AND ADD API KEY FROM COMMENTS FOR HISTORIC WEATHER FUNCTIONALITY ---
+    //    var settings = {
+    //     "async": true,
+    //     "crossDomain": true,
+    //     "url": "https://dark-sky.p.rapidapi.com/"+ lat +"," + lon + "," + unixDate,
+    //     "method": "GET",
+    //     "headers": {
+    //         "x-rapidapi-host": "dark-sky.p.rapidapi.com",
+    //         "x-rapidapi-key": ""  //  <--- add API key here
+    //     }
+    // }
+
+    // $.ajax(settings).done(function (response) {
+    //     console.log(response)
+    //     $('#temperature').empty();
+    //     $('#temperature').html(response.currently.temperature + '&deg' + "F")
+
+    //     $('#humidity').empty();
+    //     $('#humidity').text(response.currently.humidity + '%')
+
+    //     $('#wind-speed').empty();
+    //     $('#wind-speed').text(response.currently.windSpeed + ' mph')
+    //     })
+    // --- end of historic weather functionality ---
         })
+       var rocketID = response.rocket
+       $.get("https://api.spacexdata.com/v4/rockets/" + rocketID).then(function(response) { 
+            $('#rocketPicture').empty();
+           for (var i = 0; i < response.flickr_images.length; i++) {
+            $('#rocketPicture').append("<img src = '" + response.flickr_images[i] + "'>");
+           }              
+           }); 
+       })
+    }); 
+$('.submitNasaBtn').click( function() {
 
-       $('#details').empty();
-       $('#details').text(response.details)
-        //possibly add if, else for null values
-       $('#article').empty();
-       $('#article').html("<a href = '" + response.links.article + "'>" +response.links.article + "</a>"+ "<br>" +
-       "<a href = '" + response.links.webcast + "'>" +response.links.webcast + "</a>" )
+var nasaAPIKey = "l80wySp5TfuYjJnbHX16YApnaaudSSnfitERu55z";
+var nasaURL = "https://api.nasa.gov/techport/api/projects?api_key=" + nasaAPIKey;
+$.ajax({
+url: nasaURL,
+method: "GET"
 })
+.then(function(response) {   
+    var nasaProject = Math.floor(Math.random() * response.projects.projects.length);
+    var selectedProject = response.projects.projects[nasaProject].id
+    var nasaProjectURL = "https://api.nasa.gov/techport/api/projects/" + selectedProject + "?api_key="+ nasaAPIKey;
+  
+    $.ajax({
+        url: nasaProjectURL,
+        method: "GET"
+        }).then(function(response) {
+        console.log(response);
+        $('#id').empty();
+        $('#id').text(response.project.id + "  " + response.project.title)
+
+        $('#startDate').empty();
+        $('#startDate').text(response.project.startDate)
+
+        $('#endDate').empty();
+        $('#endDate').text(response.project.endDate)
+
+        $('#description').empty();
+        $('#description').html(response.project.description)
+
+        $('#status').empty();
+        $('#status').text(response.project.status)
+        })
+});
 })
 
-// var flightDetails = response[0].details; -
-// var launchDate = response[0].launch_date_local;-
-// var launchYear = response[0].launch_year; - could not find
-// var articleLink = response[0].links.article_link; - links.article
-// var launchSite = response[0].launch_site.site_name_long; - could not find
-// var flightDetailsText= $("<p>");
-// var launchDateText = $("<p>");
-// var launchYearText= $("<p>");
-// var articleLinkText= $("<p>");
-// var launchSiteText = $("<p>");
-// flightDetailsText.text(flightDetails);
-// launchDateText.text(launchDate);
-// launchYearText.text(launchYear);
-// articleLinkText.text(articleLink);
-// launchSiteText.text(launchSite);
-// $("#text").append(flightDetailsText);
-// $("#text").append(launchDateText);
-// $("#text").append(launchYearText);
-// $("#text").append(articleLinkText);
-// $("#text").append(launchSiteText);
+

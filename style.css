@@ -22,7 +22,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-#timelineText, #timelineEvents, #timelineTitle {
+#timelineText, #timelineEvents, #timelineTitle, #nasaInfo {
     color: white;
     font-family: 'Montserrat', sans-serif;    
 }
@@ -39,6 +39,7 @@
     color: #a7a9ac;  
 }
 
+
 #nasaInfo, #spacexInfo {
     margin-left: 215px;
     width: 40%;
@@ -47,6 +48,7 @@
 #nasaImage, #spacexImage {
     width: 350px;
     height: 550px;
+
 }
 
 a {

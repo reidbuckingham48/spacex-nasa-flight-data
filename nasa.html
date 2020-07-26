@@ -1,24 +1,25 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
   <link rel="stylesheet" href="./index.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>document.getElementsByTagName("html")[0].className += " js";</script>
   <link rel="stylesheet" href="horizontal-timeline-master/assets/css/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" type="text/css" rel="stylesheet">>
   <!-- Link to Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <title>NASA: SpaceX/NASA Flight Data Comparison</title>
 </head>
+
 <body id="body">
+
     <container>
 
    <!-- Navbar -->
@@ -245,15 +246,13 @@
             <h3 class="cd-h-timeline__event-title" id="timelineTitle">The Martian</h3>
             <em class="cd-h-timeline__event-date">August 6, 2012</em>
             <p class="cd-h-timeline__event-description color-contrast-light">  
+
               <a href="https://en.wikipedia.org/wiki/Curiosity_(rover)" target="_blank" style="color: white">Mars Rover Curiosity</a> 
               lands. Rover's goals on Mars include investigating the climate and geology, determining whether the selected 
               field site ever offered environmental conditions favorable for microbial life, including a determination of the 
               role of water; and whether the planet provides a habitat suitable for human exploration.
-            </p>
-          </div>
-        </li>
 
-        <li class="cd-h-timeline__event text-component">
+          <li class="cd-h-timeline__event text-component">
           <div class="cd-h-timeline__event-content container">
             <h3 class="cd-h-timeline__event-title" id="timelineTitle">Girl Power</h3>
             <em class="cd-h-timeline__event-date">October 18, 2019</em>
@@ -261,28 +260,33 @@
              The International Space Station had its first all-female spacewalk, with astronauts Jessica Meir and Christina Koch. The spacewalk 
              lasted seven hours and 17 minutes and replaced a faulty Battery Charging Discharging Unit.
             </p>
+
           </div>
+
         </li>
       </ol>
     </div> <!-- .cd-h-timeline__events -->
   </section>
 
+  
 
-   <div id="nasaInfo">
-      <div id="container">
-      <span class="title" id="title">The Origins of NASA</span><br>
-        <span class="subtitle" id="subtitle">NASA, the National Aeronautics and Space Act, was created and signed into effect on July 29, 1958 by President Eisenhower in response to the Soviet Union's October 4, 1957 launch of its 
-        first satellite, Sputnik I. The 183-pound, basketball-sized satellite orbited the earth in 98 minutes. NASA's first administrator was Dr. T. Keith Glennan.</span><br>
-        <br>
-        <span class="title" id="title">Ongoing Investigations</span><br>
-         <span class="subtitle" id="subtitle">NASA is currently conducting in-depth surveys of Mars and Saturn and studies of the Earth and the Sun. 
-          Other active spacecraft missions are Juno for Jupiter; New Horizons for Jupiter, Pluto and beyond; and Dawn for the asteroid belt.
-        </span>
-      
-    <div id="nasaImage">
-      <img src="./Index Assets/NASA.jpg" alt="Apollo 11 Rocket">
-    </div>
+<div class="columns is-mobile" id="nasaInfo">
+   <div class="column">
+    <span class="title" id="titleNASA">The Origins of NASA</span><br>
+      <span class="subtitle" id="subtitleNASA">NASA, the National Aeronautics and Space Act, was created and signed into effect on July 29, 1958 by President Eisenhower in response to the Soviet Union's October 4, 1957 launch of its 
+      first satellite, Sputnik I. The 183-pound, basketball-sized satellite orbited the earth in 98 minutes. NASA's first administrator was Dr. T. Keith Glennan.</span><br>
+      </span>
+      <span class="title" id="titleNASA">Ongoing Investigations</span><br>
+      <span class="subtitle" id="subtitleNASA">NASA is currently conducting in-depth surveys of Mars and Saturn and studies of the Earth and the Sun. 
+        Other active spacecraft missions are Juno for Jupiter; New Horizons for Jupiter, Pluto and beyond; and Dawn for the asteroid belt.
+      </span>
   </div>
+  <div class="column" >
+    <img id="nasaImage" src="./Index Assets/NASA.jpg" alt="Apollo 11 Rocket">
+  </div>
+</div>
+
+
 
   <footer class="footer" id="footer">
     <div class="content">
@@ -292,8 +296,13 @@
     </div>
   </footer>
 
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="horizontal-timeline-master/assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
   <script src="horizontal-timeline-master/assets/js/swipe-content.js"></script> <!-- A Vanilla JavaScript plugin to detect touch interactions -->
+
   <script src="horizontal-timeline-master/assets/js/main.js"></script>
- </body>
+</body>
+
 </html>
