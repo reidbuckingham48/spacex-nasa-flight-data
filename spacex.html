@@ -6,60 +6,66 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./index.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>document.getElementsByTagName("html")[0].className += " js";</script>
   <link rel="stylesheet" href="horizontal-timeline-master/assets/css/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" type="text/css" rel="stylesheet">>
+  <!-- Link to Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <!-- Link to Stylesheet -->
+  <link rel="stylesheet" href="./style.css">
   <title>SPACEX: SpaceX/NASA Flight Data Comparison</title>
 </head>
 
-<body style="background-color:  #005288">
+<body id="body">
+
   <container>
 
     <div class="container">
       <!-- Navbar -->
 
-      <nav class="navbar" style="background-color: #005288" role="navigation" aria-label="main navigation">
-        <div class="navbar-item is-hoverable navbar-end">
-          <div class="buttons has-addons">
-            <a href="./index.html" class="button is-small has-text-white" style="background-color: #a7a9ac">
-              Home
-            </a>
-            <a href="./nasa.html" class="button is-small has-text-white" style="background-color: #a7a9ac">
-              NASA Info
-            </a>
-            <a href="./spacex.html" class="button is-small has-text-white" style="background-color: #a7a9ac">
-              SpaceX Info
-            </a>
-            <a href="./data.html" class="button is-small has-text-white" style="background-color: #a7a9ac">
-              Flight Data
-            </a>
-      </nav>
 
+      <div class="container">
+        <nav class="navbar" id="navtop" role="navigation" aria-label="main navigation">
+                   <div class="navbar-item is-hoverable navbar-end">
+                       <div class="buttons has-addons">
+                  <a href="./index.html" id="navbtn">
+                   Home
+                  </a>
+                  <a href="./nasa.html" id="navbtn">
+                   NASA Info
+                  </a>
+                  <a href="./spacex.html" id="navbtn">
+                    SpaceX Info
+                  </a>
+                  <a href="./data.html" id="navbtn">
+                    Flight Data
+                  </a>
+                </nav>
+  
 
-      <section class="cd-h-timeline js-cd-h-timeline margin-bottom-md" style="margin: 100px 0px"
-        style="background-color: #005288">
+      <section class="cd-h-timeline js-cd-h-timeline margin-bottom-md" id="timeline">
 
         <div class="cd-h-timeline__container container">
           <div class="cd-h-timeline__dates">
             <div class="cd-h-timeline__line">
               <ol>
                 <li><a href="#0" data-date="10/06/2001"
-                    class="cd-h-timeline__date has-text-white cd-h-timeline__date--selected">10
+
+                    class="cd-h-timeline__date has-text-white cd-h-timeline__date--selected" id="timelineText">10
                     Jun</a></li>
-                <li><a href="#0" data-date="05/06/2002" class="cd-h-timeline__date has-text-white">06 May</a></li>
-                <li><a href="#0" data-date="18/08/2006" class="cd-h-timeline__date has-text-white">18 Aug</a></li>
-                <li><a href="#0" data-date="28/09/2008" class="cd-h-timeline__date has-text-white">28 Sep</a></li>
-                <li><a href="#0" data-date="01/01/2011" class="cd-h-timeline__date has-text-white">01 Jan</a></li>
-                <li><a href="#0" data-date="25/05/2012" class="cd-h-timeline__date has-text-white">25 May</a></li>
-                <li><a href="#0" data-date="07/09/2014" class="cd-h-timeline__date has-text-white">07 Sep</a></li>
-                <li><a href="#0" data-date="06/02/2018" class="cd-h-timeline__date has-text-white">06 Feb</a></li>
-                <li><a href="#0" data-date="01/01/2020" class="cd-h-timeline__date has-text-white">01 Jan</a></li>
+                <li><a href="#0" data-date="05/06/2002" class="cd-h-timeline__date" id="timelineText">06 May</a></li>
+                <li><a href="#0" data-date="18/08/2006" class="cd-h-timeline__date" id="timelineText">18 Aug</a></li>
+                <li><a href="#0" data-date="28/09/2008" class="cd-h-timeline__date" id="timelineText">28 Sep</a></li>
+                <li><a href="#0" data-date="01/01/2011" class="cd-h-timeline__date" id="timelineText">01 Jan</a></li>
+                <li><a href="#0" data-date="25/05/2012" class="cd-h-timeline__date" id="timelineText">25 May</a></li>
+                <li><a href="#0" data-date="07/09/2014" class="cd-h-timeline__date" id="timelineText">07 Sep</a></li>
+                <li><a href="#0" data-date="06/02/2018" class="cd-h-timeline__date" id="timelineText">06 Feb</a></li>
+                <li><a href="#0" data-date="01/01/2020" class="cd-h-timeline__date" id="timelineText">01 Jan</a></li>
+
               </ol>
 
               <span class="cd-h-timeline__filling-line" aria-hidden="true"></span>
@@ -76,7 +82,9 @@
           </ul>
         </div> <!-- .cd-h-timeline__container -->
 
-        <div class="cd-h-timeline__events" style="color: white">
+
+        <div class="cd-h-timeline__events" id="timelineEvents">
+
           <ol>
             <li class="cd-h-timeline__event cd-h-timeline__event--selected text-component">
               <div class="cd-h-timeline__event-content container">
@@ -162,7 +170,9 @@
                 <!-- <h2 class="cd-h-timeline__event-title">Manned space Flight</h2> -->
                 <em class="cd-h-timeline__event-date">January 01, 2020</em>
                 <p class="cd-h-timeline__event-description color-contrast-light">
-                  SpaxeX first manned space flight. </p>
+
+                  SpaceX first manned space flight. </p>
+
               </div>
             </li>
           </ol>
@@ -171,60 +181,47 @@
       </div>
   </container>
 
-  <section class="columns is-centered" style="margin-left: 215px">
-    <div>
-      <div class="row">
-        <div class="col-6">
-          <div class="leftside-col">
-            <h2 class="large" style="color: #a7a9ac" style="margin-left: 100px">The origins of SpaceX...</h2>
-            <p class="paragraph has-text-white column is-centered" style="margin-left: 100px">Headquarters are in
-              Hawthorne, California. SpaceX was formed by
-              entrepreneur
-              Elon Musk in the hopes of revolutionizing the aerospace industry and making affordable
-              spaceflight a reality. The company entered the arena with the Falcon 1 rocket, a two-stage
-              liquid-fueled craft designed to send small satellites into orbit.
-            </p>
-            <p class="paragraph has-text-white" style="margin-left: 100px">
-              “You want to wake up in the morning and think the future is going to be great - and that’s what being a
-              spacefaring civilization is all about. It’s about believing in the future and thinking that the future
-              will
-              be better than the past. And I can’t think of anything more exciting than going out there and being among
-              the
-              stars.”
-              -Elon Musk
-            </p>
-            <hr><br>
-            <h2 class="paragraph has-text-white column is-centered">Future Plans...</h2>
-            <!-- <a href="https://www.nasa.gov/sites/default/files/files/SpaceX_NASA_CRS-5_PressKit.pdf">
-              <i class="spacex-img"></i>SpaceX Website</a><br> -->
-            <a href="https://www.spacex.com/human-spaceflight/mars/">
-              <i class="spacex-img"></i>Mars & Beyond</a><br>
-            <a
-              href="https://www.inverse.com/article/51291-spacex-here-s-the-timeline-for-getting-to-mars-and-starting-a-colony">
-              <i class="spacex-img"></i>Colonizing Mars</a><br>
-            <a href="https://www.space.com/elon-musk-unveils-spacex-starship-2019-update.html">
-              <i class="spacex-img"></i>Private Trips to the Moon</a><br>
-            <a href="https://en.wikipedia.org/wiki/SpaceX_Mars_transportation_infrastructure">
-              <i class="spacex-img"></i>SpaceX Wikipedia</a>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </section>
 
-  <div class="rightside-col">
-    <img src="./Index Assets/Falcon Heavy.jpg" alt="Falcon Heavy Rocket" width="350" height="550">
-  </div>
+  <div id="spacexInfo">
+    <div id="container">
+    <span class="title" id="title">The Origins of SpaceX</span><br>
+      <span class="subtitle" id="subtitle">Headquarters are in Hawthorne, California. SpaceX was formed by
+        entrepreneur Elon Musk in the hopes of revolutionizing the aerospace industry and making affordable
+        spaceflight a reality. The company entered the arena with the Falcon 1 rocket, a two-stage
+        liquid-fueled craft designed to send small satellites into orbit.<br>
+        <br>
+        “You want to wake up in the morning and think the future is going to be great - and that’s what being a
+        spacefaring civilization is all about. It’s about believing in the future and thinking that the future
+        will be better than the past. And I can’t think of anything more exciting than going out there and being among
+        the stars.”
+        -Elon Musk
+      </span>
+      <br>
+      <br>
+      <span class="title" id="title">Additional SpaceX Information</span><br>
+      <p id="spacexLinks"><b><a href="https://www.spacex.com/human-spaceflight/mars/" target="_blank">Mars & Beyond</a></b></p>
+      <p id="spacexLinks"><b> <a href="https://www.inverse.com/article/51291-spacex-here-s-the-timeline-for-getting-to-mars-and-starting-a-colony" target="_blank">Colonizing Mars</a></b></p>
+      <p id="spacexLinks"><b><a href="https://www.space.com/elon-musk-unveils-spacex-starship-2019-update.html" target="_blank">Private Trips to the Moon</a></b></p>
+      <p id="spacexLinks"><b><a href="https://en.wikipedia.org/wiki/SpaceX_Mars_transportation_infrastructure" target="_blank">SpaceX Wikipedia</a></b></p>
 
-  <footer class="footer" style="background-color: #005288">
-    <div class="content has-text-centered">
+  <div id="spacexImage">
+    <img src="./Index Assets/NASA.jpg" alt="Falcon Heavy Rocket"></div>
+</div>
+
+  <footer class="footer" id="footer">
+    <div class="content">
       <p>
-        <strong style="color: white">University of Kansas Full Stack BootCamp, August 2020 / Created by Jordan
-          Benningfield, Aurora Brune, Reid Buckingham, Julie Schaub</strong>
+        <strong id="footerText">University of Kansas Full Stack BootCamp, August 2020 / Created by Jordan Benningfield, 
+          Aurora Brune, Reid Buckingham, Julie Schaub</strong> 
+
       </p>
     </div>
   </footer>
+
+
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
   <script src="horizontal-timeline-master/assets/js/util.js"></script>
   <!-- util functions included in the CodyHouse framework -->
