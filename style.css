@@ -3,11 +3,26 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-#navbtn, #submitNasaBtn, #submitSpacexBtn {
+#navbtn, #navbtnSpacex, #submitNasaBtn, #submitSpacexBtn {
     background-color: #a7a9ac;
     color: white;
     font-family: 'Montserrat', sans-serif;
     padding: 10px;
+}
+
+#navbtn {
+  margin-top: -113px;
+}
+
+#navbarImage { 
+  background: url(IndexAssets/navbar3.jpg); 
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+#navbtnSpacex {
+  margin-top: -75px;
+  position: relative;
 }
 
 /* Carousel CSS */
