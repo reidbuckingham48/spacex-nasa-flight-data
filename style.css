@@ -183,14 +183,21 @@ width: "150px";
 }
 
 #footer {
+  position: fixed;
     text-align: center;
    }
 
-  #footerText {
-    color: white;
+  #navbarBottom {
+    margin-top: 25px;
+   background-color: gold;
+   }
+   
+  #navbarBottomText {
+    margin-left: 125px;
+    color: black;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-  } 
+  }
 
   #space {
     overflow: inherit;
@@ -199,3 +206,5 @@ width: "150px";
 .rocketPicture {
   width: 50%;
 }
+
+
