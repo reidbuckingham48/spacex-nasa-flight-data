@@ -175,10 +175,6 @@ img {vertical-align: middle;}
     width: 250px;
    }
 
-#table tr:hover {
-    background-color: #a7a9ac;
-  }
-
   td, #article {
       color: navy;
   }
@@ -194,14 +190,15 @@ width: "150px";
 
   #navbarBottom {
     margin-top: 25px;
-   background-color: gold;
+   background-color: #a7a9ac;
    }
    
   #navbarBottomText {
-    margin-left: 125px;
-    color: black;
+    background-color: #a7a9ac;
+    margin-left: 200px;
+    color: white;
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+    font-size: 12px;
   }
 
   #space {
