@@ -4,7 +4,7 @@
 }
 
 #navbtn, #navbtnSpacex, #submitNasaBtn, #submitSpacexBtn {
-    background-color: #a7a9ac;
+    background-color: rgba(167, 169, 172, 0.6);
     color: white;
     font-family: 'Montserrat', sans-serif;
     padding: 10px;
@@ -14,10 +14,15 @@
   margin-top: -113px;
 }
 
+#navbtn:hover {
+  background-color: rgba(118, 120, 122, 0.6);
+}
+
 #navbarImage { 
   background: url(IndexAssets/navbar3.jpg); 
   padding-top: 0px;
   padding-bottom: 0px;
+  height:200px;
 }
 
 #navbtnSpacex {
@@ -70,7 +75,7 @@ img {vertical-align: middle;}
 }
 
 .active {
-  background-color: #717171;
+  background-color:rgba(113, 113, 113, 1)
 }
 
 /* Fading animation */
