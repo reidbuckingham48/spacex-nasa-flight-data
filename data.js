@@ -1,7 +1,7 @@
 queryLaunches();
 function queryLaunches(){
     $.get("https://api.spacexdata.com/v4/launches").then(function(response) {
-        // for each flight in response array, creates an option in dropdown menu with flight num, date and time
+        // for each flight in response object, creates an option in dropdown menu with flight number, date and time
         for (var i = 0; i < response.length; i++) {
             var dateString = moment.unix(response[i].date_unix).format("YYYY-MM-DD HH:mm");
             var dropdownOpt = $('<option>');
@@ -11,11 +11,11 @@ function queryLaunches(){
         };
     })
 }
-
+//submit button keylistener
 $('.submitSpacexBtn').click( function() {
     userChoice = (flightNum.value);
 
-    //query launch data
+    //query SpaceX api for launch data then populate associated table data & links
     $.get("https://api.spacexdata.com/v4/launches/" + userChoice).then(function(response) {
 
        $('#flightNumber').empty();
@@ -26,24 +26,26 @@ $('.submitSpacexBtn').click( function() {
 
        $('#date').empty();
        $('#date').text(moment.unix(response.date_unix).format("YYYY-MM-DD HH:mm"))
-       var unixDate = response.date_unix
+        var unixDate = response.date_unix // <-- this is used in the DarkSky API call below
 
         var lat;
         var lon;
 
         $('#details').empty();
         $('#details').text(response.details)
-         //possibly add if, else for null values
+        
         $('#article').empty();
         $('#article').html("<a href = '" + response.links.article + "'>" +response.links.article + "</a>"+ "<br>" +
         "<a href = '" + response.links.webcast + "'>" +response.links.webcast + "</a>" )
-       //query launchpad information for 'location' field
-       $.get("https://api.spacexdata.com/v4/launchpads/" + response.launchpad).then(function(response) {
-       $('#location').empty();
-       $('#location').text(response.full_name)
-       lat = response.latitude;
-       lon = response.longitude;
-      // query for Dark Sky historic weather info    
+
+        //query SpaceX for launchpad data for use in 'location' field as well as DarkSky API call
+        $.get("https://api.spacexdata.com/v4/launchpads/" + response.launchpad).then(function(response) {
+        $('#location').empty();
+        $('#location').text(response.full_name)
+        lat = response.latitude;
+        lon = response.longitude;
+
+      // query DarkSky for historic weather info table   
       
       // --- UNCOMMENT AND ADD API KEY FROM COMMENTS FOR HISTORIC WEATHER FUNCTIONALITY ---
     //    var settings = {
@@ -68,35 +70,38 @@ $('.submitSpacexBtn').click( function() {
     //     $('#wind-speed').empty();
     //     $('#wind-speed').text(response.currently.windSpeed + ' mph')
     //     })
-    // --- end of historic weather functionality ---
+    // --- END of historic weather functionality ---
+
         })
+        // query SpaceX API for rocket information and pictures to append
        var rocketID = response.rocket
        $.get("https://api.spacexdata.com/v4/rockets/" + rocketID).then(function(response) { 
             $('#rocketPicture').empty();
            for (var i = 0; i < response.flickr_images.length; i++) {
             $('#rocketPicture').append("<img class = 'rocketPicture' src = '" + response.flickr_images[i] + "'>");
            }              
-           }); 
-       })
-    }); 
+        }); 
+    })
+}); 
+// keylistener on submit button for nasa
 $('.submitNasaBtn').click( function() {
-
-var nasaAPIKey = "l80wySp5TfuYjJnbHX16YApnaaudSSnfitERu55z";
-var nasaURL = "https://api.nasa.gov/techport/api/projects?api_key=" + nasaAPIKey;
-$.ajax({
-url: nasaURL,
-method: "GET"
-})
+    var nasaAPIKey = "l80wySp5TfuYjJnbHX16YApnaaudSSnfitERu55z";
+    var nasaURL = "https://api.nasa.gov/techport/api/projects?api_key=" + nasaAPIKey;
+    //query API for projects
+    $.ajax({
+    url: nasaURL,
+    method: "GET"
+    })
+//choose random project from response object
 .then(function(response) {   
     var nasaProject = Math.floor(Math.random() * response.projects.projects.length);
     var selectedProject = response.projects.projects[nasaProject].id
     var nasaProjectURL = "https://api.nasa.gov/techport/api/projects/" + selectedProject + "?api_key="+ nasaAPIKey;
-  
     $.ajax({
         url: nasaProjectURL,
         method: "GET"
         }).then(function(response) {
-        console.log(response);
+        //populate fields for NASA project
         $('#id').empty();
         $('#id').text(response.project.id + "  " + response.project.title)
 
@@ -112,7 +117,7 @@ method: "GET"
         $('#status').empty();
         $('#status').text(response.project.status)
         })
-});
+    });
 })
 
 
