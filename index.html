@@ -1,131 +1,130 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-    <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
-     <!-- Link to Google Font -->
-     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="./style.css">
-   
-    <title>Home: SpaceX/NASA Flight Comparison</title>  
-  </head>
-  <body id="body">
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
+  <!-- Link to Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <title>Home: SpaceX/NASA Flight Comparison</title>
+</head>
 
-    <!-- Navbar -->
-    <div class="container">
-      <nav class="navbar" id="navbarImage" aria-label="main navigation"></nav> 
+<body id="body">
+
+  <!-- Navbar -->
+  <div class="container">
+    <nav class="navbar" id="navbarImage" aria-label="main navigation"></nav>
+  </div>
+
+  <div class="container">
+    <nav class="navbar is-mobile" id="navtop" aria-label="main navigation">
+      <div class="navbar-item is-hoverable navbar-end">
+        <div class="buttons has-addons">
+          <a href="./index.html" class="navbtn">
+            Home
+          </a>
+          <a href="./nasa.html" class="navbtn">
+            NASA Info
+          </a>
+          <a href="./spacex.html" class="navbtn">
+            SpaceX Info
+          </a>
+          <a href="./data.html" class="navbtn">
+            Mission Data
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- Page Title -->
+    <div class="block">
+      <section class="hero is-mobile">
+        <div class="hero-body">
+          <h1 class="title" id="title">NASA/SpaceX Flight Data Comparison</h1>
+          <h2 class="subtitle" id="subtitle">This interactive site will provide information about NASA, SpaceX and their
+            relative flight data information. Explore the
+            history of NASA and SpaceX on the following pages with their interactive timelines that include links for
+            additional organizational
+            and mission detail. For in-depth details of select NASA flights and all SpaceX flights, pick a mission from
+            the dropdown and click the link in
+            the data table. <br>
+            <br>
+            This project was created for the University of Kansas Full Stack BootCamp by Jordan Benningfield, Aurora
+            Brune, Reid Buckingham and Julie Schaub.
+          </h2>
+        </div>
+      </section>
     </div>
-  
-    <div class="container">
-      <nav class="navbar is-mobile" id="navtop" aria-label="main navigation">
-        <div class="navbar-item is-hoverable navbar-end">
-          <div class="buttons has-addons">
-            <a href="./index.html" class="navbtn">
-              Home
-            </a>
-            <a href="./nasa.html" class="navbtn">
-              NASA Info
-            </a>
-            <a href="./spacex.html" class="navbtn">
-              SpaceX Info
-            </a>
-            <a href="./data.html" class="navbtn">
-          Mission Data
-            </a>
-          </div>
+    <!-- Updated Carousel -->
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 6</div>
+        <img id="slidePics" src="./IndexAssets/Apollo Moonwalk.jpg" alt="Apollo Moonwalk" style="width:694px">
+        <div class="text">Apollo Moonwalk</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 6</div>
+        <img src="./IndexAssets/Dragon.jpg" alt="Spacex Dragon" style="width:694px">
+        <div class="text">SpaceX Dragon</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 6</div>
+        <img src="./IndexAssets/Gemini-Earth.jpg" alt="Picture of Earth" style="width:694px">
+        <div class="text">Picture of Earth from Gemini XI</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 6</div>
+        <img src="./IndexAssets/CRS19.jpg" alt="SpaceX CRS 19" style="width:694px">
+        <div class="text">SpaceX CRS 19</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 6</div>
+        <img src="./IndexAssets/Gemini.jpg" alt="Gemini Rocket" style="width:694px">
+        <div class="text">Launch of Gemini XI</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">6 / 6</div>
+        <img src="./IndexAssets/ISS.jpg" alt="View of the Nile River from space" style="width:100%">
+        <div class="text">View of the Nile River from the International Space Station</div>
+      </div>
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <nav class="navbar" id="navbarBottom" role="navigation" aria-label="main navigation">
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item is-mobile" id="navbarBottomText">
+            University of Kansas Full Stack BootCamp, August 2020 / Created by Jordan Benningfield, Aurora Brune, Reid
+            Buckingham, Julie Schaub
+          </a>
         </div>
-      </nav>
+      </div>
+    </nav>
 
-
-
-                 <!-- Page Title -->
-        <div class="block">
-          <section class="hero is-mobile">
-         <div class="hero-body">
-                 <h1 class="title" id="title">NASA/SpaceX Flight Data Comparison</h1>
-                 <h2 class="subtitle" id="subtitle">This interactive site will provide information about NASA, SpaceX and their relative flight data information. Explore the 
-                   history of NASA and SpaceX on the following pages with their interactive timelines that include links for additional organizational
-                   and mission detail. For in-depth details of select NASA flights and all SpaceX flights, pick a mission from the dropdown and click the link in 
-                   the data table. <br>
-                   <br>
-                   This project was created for the University of Kansas Full Stack BootCamp by Jordan Benningfield, Aurora Brune, Reid Buckingham and Julie Schaub.
-                 </h2>
-         </div>
-       </section>
-
-       <!-- Updated Carousel -->
-       <div class="slideshow-container">
-
-        <div class="mySlides fade">
-          <div class="numbertext">1 / 6</div>
-          <img id="slidePics" src="./IndexAssets/Apollo Moonwalk.jpg" alt="Apollo Moonwalk" style="width:694px" >
-          <div class="text">Apollo Moonwalk</div>
-        </div>
-        
-        <div class="mySlides fade">
-          <div class="numbertext">2 / 6</div>
-          <img src="./IndexAssets/Dragon.jpg" alt="Spacex Dragon" style="width:694px">
-          <div class="text">SpaceX Dragon</div>
-        </div>
-        
-        <div class="mySlides fade">
-          <div class="numbertext">3 / 6</div>
-          <img src="./IndexAssets/Gemini-Earth.jpg" alt="Picture of Earth" style="width:694px">
-          <div class="text">Picture of Earth from Gemini XI</div>
-        </div>
-
-        <div class="mySlides fade">
-          <div class="numbertext">4 / 6</div>
-          <img src="./IndexAssets/CRS19.jpg" alt="SpaceX CRS 19" style="width:694px">
-          <div class="text">SpaceX CRS 19</div>
-        </div>
-
-        <div class="mySlides fade">
-          <div class="numbertext">5 / 6</div>
-          <img src="./IndexAssets/Gemini.jpg" alt="Gemini Rocket" style="width:694px">
-          <div class="text">Launch of Gemini XI</div>
-        </div>
-
-        <div class="mySlides fade">
-          <div class="numbertext">6 / 6</div>
-          <img src="./IndexAssets/ISS.jpg" alt="View of the Nile River from space" style="width:100%">
-          <div class="text">View of the Nile River from the International Space Station</div>
-        </div>
-        
-        </div>
-        <br>
-        
-        <div style="text-align:center">
-          <span class="dot"></span> 
-          <span class="dot"></span> 
-          <span class="dot"></span> 
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-        </div>
- 
-
-         <nav class="navbar" id="navbarBottom" role="navigation" aria-label="main navigation">
-
-        <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-              <a class="navbar-item is-mobile" id="navbarBottomText">
-                University of Kansas Full Stack BootCamp, August 2020 / Created by Jordan Benningfield, Aurora Brune, Reid Buckingham, Julie Schaub
-              </a>
-          </div>
-        </nav>
-              
-                 
 </body>
-  
 <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
 <script defer src="scripts.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
