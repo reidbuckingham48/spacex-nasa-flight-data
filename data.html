@@ -17,42 +17,40 @@
   
   <body id="body">
 
-  <container>
-
  <!-- Navbar -->
   <div class="container">
-    <nav class="navbar" id="navbarImage" role="navigation" aria-label="main navigation">
-          <a class="navbar-item" id="navbarImage" href="./IndexAssets/navbar3.jpg" alt="Space" width="100%"></a>>
-      </div>
-    </nav> 
+    <nav class="navbar" id="navbarImage" aria-label="main navigation"></nav> 
+  </div>
 
   <div class="container">
-    <nav class="navbar is-mobile" id="navtop" role="navigation" aria-label="main navigation">
-               <div class="navbar-item is-hoverable navbar-end">
-                   <div class="buttons has-addons">
-              <a href="./index.html" id="navbtn">
-               Home
-              </a>
-              <a href="./nasa.html" id="navbtn">
-               NASA Info
-              </a>
-              <a href="./spacex.html" id="navbtn">
-                SpaceX Info
-              </a>
-              <a href="./data.html" id="navbtn">
-                Mission Data
-              </a>
-            </nav>
+    <nav class="navbar is-mobile" id="navtop" aria-label="main navigation">
+      <div class="navbar-item is-hoverable navbar-end">
+        <div class="buttons has-addons">
+          <a href="./index.html" class="navbtn">
+            Home
+          </a>
+          <a href="./nasa.html" class="navbtn">
+            NASA Info
+          </a>
+          <a href="./spacex.html" class="navbtn">
+            SpaceX Info
+          </a>
+          <a href="./data.html" class="navbtn">
+        Mission Data
+          </a>
+        </div>
+      </div>
+    </nav>
 
                 <!-- Page Title -->
-                <div class="columns is-mobile" id="dataInfo">
+                  <div class="columns is-mobile">
                     <div class="column">
-                     <span class="title" id="titleData">Nasa Project Data:</span><br>
-                       <span class="subtitle" id="subtitleData">Choose a random NASA project from over 12,000 on file</span>
+                     <span class="title titleData">Nasa Project Data:</span><br>
+                       <span class="subtitle subtitleData">Choose a random NASA project from over 12,000 on file</span>
 
         <!-- NASA Flight Data -->
         <div class="block">
-            <table class="table" id="table">
+            <table class="table">
                 <tbody>
                         <tr>
                         <td>Project ID</td>
@@ -89,19 +87,18 @@
             <div class="block">
 
         <!-- SpaceX Flight Data -->
-        <div class="columns is-mobile" id="dataInfo">
+        <div class="columns is-mobile">
             <div class="column">
-             <span class="title" id="titleData">SpaceX Mission Flight Data:</span><br>
-               <span class="subtitle" id="subtitleData">Choose a mission from the dropdown to view details.</span>
+             <span class="title titleData">SpaceX Mission Flight Data:</span><br>
+               <span class="subtitle subtitleData">Choose a mission from the dropdown to view details.</span>
           
         <div class="block">
-            <table class="table" id="table">
+            <table class="table">
                 <tbody>
-                        <tr>
+                    <tr>
                         <td>Flight Number</td>
                         <td id = 'flightNumber'></td>
                     </tr>
-                    <tr>
                     <tr>
                         <td>Name</td>
                         <td id = 'name'></td>
@@ -127,7 +124,7 @@
 
                     <!-- SpaceX historial Weather dump -->
         <div class="block">
-            <table class="table" id="table">
+            <table class="table">
                 <tbody>
                     <tr><th><div id="tableHeader"></div>The Weather That Day...</th></tr>
                     <tr>
@@ -141,6 +138,7 @@
                      <tr>
                         <td>Wind Speed</td>
                         <td id = 'wind-speed'></td>
+                     </tr>
                 </tbody>
             </table>
 
@@ -158,25 +156,31 @@
                  </div>
             </div>
 
-            <div id = 'rocketPicture'>
-                <!-- rocket images go here -->
-            </div>
-            <!-- Data Results -->
-            <div class="block">
-
-              <nav class="navbar" id="navbarBottom" role="navigation" aria-label="main navigation">
-                <div id="navbarBasicExample" class="navbar-menu">
-                    <div class="navbar-start">
-                      <a class="navbar-item" id="navbarBottomText">
-                        University of Kansas Full Stack BootCamp, August 2020 / Created by Jordan Benningfield, Aurora Brune, Reid Buckingham, Julie Schaub
-                      </a>
+                  <div id = 'rocketPicture'>
+                      <!-- rocket images go here -->
                   </div>
-                </nav>
+            <!-- Data Results -->
+                  <div class="block">
 
-               
-               
-                <script src="data.js"></script>
+                    <nav class="navbar" id="navbarBottom" aria-label="main navigation">
+                      <div id="navbarBasicExample" class="navbar-menu">
+                        <div class="navbar-start">
+                          <a class="navbar-item" id="navbarBottomText">
+                            University of Kansas Full Stack BootCamp, August 2020 / Created by Jordan Benningfield, Aurora Brune, Reid Buckingham, Julie Schaub
+                          </a>
+                        </div>
+                      </div>
+                    </nav>
 
+
+                   <script src="data.js"></script>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </body>
+      </div>
+    </div>
+  </body>
 </html>
