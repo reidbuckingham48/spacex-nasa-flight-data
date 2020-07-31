@@ -7,6 +7,8 @@ history of NASA and SpaceX on the following pages with their interactive timelin
 and mission detail. For in-depth details of select NASA flights and all SpaceX flights, pick a mission from the dropdown and click the link in 
 the data table.
 
+![image](https://user-images.githubusercontent.com/64329660/88992600-75730680-d2a9-11ea-8837-afb60443518b.png)
+
 ---> User Story <---
 
 As a user interested in space exploration, I am looking for an application that will show me 
