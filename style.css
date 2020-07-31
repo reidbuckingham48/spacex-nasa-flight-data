@@ -11,7 +11,7 @@
 }
 
 .navbtn {
-  margin-top: -113px;
+  align-self:flex-end;
 }
 
 .navbtn:hover {
@@ -115,7 +115,7 @@ img {vertical-align: middle;}
     font-family: 'Montserrat', sans-serif;
 }
 
-.timelineText, #timelineEvents, .timelineTitle, #nasaInfo {
+.timelineText, #timelineEvents, .timelineTitle, .nasaInfo, .spacexInfo {
     color: white !important;
     font-family: 'Montserrat', sans-serif;    
 }
@@ -132,8 +132,9 @@ img {vertical-align: middle;}
     color: #a7a9ac !important;  
 }
 
-#nasaInfo, #spacexInfo {
-    margin-left: 90px;
+.nasaInfo, .spacexInfo {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .titleNASA, #titleSpaceX, .titleData {
@@ -150,6 +151,9 @@ img {vertical-align: middle;}
 }
 
 #nasaImage, #spacexImage {
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 350px;
     height: 550px;
 }

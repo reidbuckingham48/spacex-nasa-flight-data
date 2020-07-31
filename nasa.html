@@ -20,30 +20,22 @@
 
    <!-- Navbar -->
    <div class="container">
-    <nav class="navbar" id="navbarImage" aria-label="main navigation"></nav> 
-  </div>
+    <div class="buttons navbar navbar-item is-hoverable navbar-end" id="navbarImage" aria-label="main navigation">
+      <a href="./index.html" class="button navbtn">
+        Home
+      </a>
+      <a href="./nasa.html" class="button navbtn">
+        NASA Info
+      </a>
+      <a href="./spacex.html" class="button navbtn">
+        SpaceX Info
+      </a>
+      <a href="./data.html" class="button navbtn">
+    Mission Data
+      </a>
+</div> 
 
-  <div class="container">
-    <nav class="navbar is-mobile" id="navtop" aria-label="main navigation">
-      <div class="navbar-item is-hoverable navbar-end">
-        <div class="buttons has-addons">
-          <a href="./index.html" class="navbtn">
-            Home
-          </a>
-          <a href="./nasa.html" class="navbtn">
-            NASA Info
-          </a>
-          <a href="./spacex.html" class="navbtn">
-            SpaceX Info
-          </a>
-          <a href="./data.html" class="navbtn">
-        Mission Data
-          </a>
-        </div>
-      </div>
-    </nav>
-
-
+<!-- Timeline -->
   <section class="cd-h-timeline js-cd-h-timeline margin-bottom-md" id="timeline">
    
     <div class="cd-h-timeline__container container">
@@ -270,20 +262,19 @@
     </div> <!-- .cd-h-timeline__events -->
   </section>
 
-<div class="columns is-mobile" id="nasaInfo">
-   <div class="column is-half is-mobile">
+<div class="columns nasaInfo">
+   <div class="column">
     <span class="title titleNASA">The Origins of NASA</span><br>
       <span class="subtitle subtitleNASA">NASA, the National Aeronautics and Space Act, was created and signed into effect on July 29, 1958 by President Eisenhower in response to the Soviet Union's October 4, 1957 launch of its 
       first satellite, Sputnik I. The 183-pound, basketball-sized satellite orbited the earth in 98 minutes. NASA's first administrator was Dr. T. Keith Glennan.
     </span>
     <br>
- 
       <span class="title titleNASA">Ongoing Investigations</span><br>
       <span class="subtitle subtitleNASA">NASA is currently conducting in-depth surveys of Mars and Saturn and studies of the Earth and the Sun. 
         Other active spacecraft missions are Juno for Jupiter; New Horizons for Jupiter, Pluto and beyond; and Dawn for the asteroid belt.
       </span>
   </div>
-  <div class="column is-mobile" >
+  <div class="column" >
     <img id="nasaImage" src="./IndexAssets/NASA.jpg" alt="Apollo 11 Rocket">
   </div>
 </div>

@@ -26,31 +26,23 @@
 
   <!-- Navbar -->
   <div class="container">
-    <nav class="navbar" id="navbarImage" aria-label="main navigation"></nav>
-  </div>
-
-  <div class="container">
-    <nav class="navbar is-mobile" id="navtop" aria-label="main navigation">
-      <div class="navbar-item is-hoverable navbar-end">
-        <div class="buttons has-addons">
-          <a href="./index.html" class="navbtn">
-            Home
-          </a>
-          <a href="./nasa.html" class="navbtn">
-            NASA Info
-          </a>
-          <a href="./spacex.html" class="navbtn">
-            SpaceX Info
-          </a>
-          <a href="./data.html" class="navbtn">
-            Mission Data
-          </a>
-        </div>
-      </div>
-    </nav>
+    <div class="buttons navbar  navbar-item is-hoverable navbar-end" id="navbarImage" aria-label="main navigation">
+      <a href="./index.html" class="button navbtn">
+        Home
+      </a>
+      <a href="./nasa.html" class="button navbtn">
+        NASA Info
+      </a>
+      <a href="./spacex.html" class="button navbtn">
+        SpaceX Info
+      </a>
+      <a href="./data.html" class="button navbtn">
+    Mission Data
+      </a>
+</div> 
     <!-- Page Title -->
     <div class="block">
-      <section class="hero is-mobile">
+      <section class="hero">
         <div class="hero-body">
           <h1 class="title" id="title">NASA/SpaceX Flight Data Comparison</h1>
           <h2 class="subtitle" id="subtitle">This interactive site will provide information about NASA, SpaceX and their
@@ -121,7 +113,7 @@
 
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item is-mobile" id="navbarBottomText">
+          <a class="navbar-item" id="navbarBottomText">
             University of Kansas Full Stack BootCamp, August 2020 / Created by Jordan Benningfield, Aurora Brune, Reid
             Buckingham, Julie Schaub
           </a>
@@ -129,7 +121,7 @@
       </div>
     </nav>
   </div>
-  <script src="index.js"></script>
+   <script src="index.js"></script>
   <script src="indexscripts.js"></script>
 </body>
 </html>
