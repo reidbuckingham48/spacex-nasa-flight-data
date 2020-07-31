@@ -115,8 +115,8 @@ img {vertical-align: middle;}
     font-family: 'Montserrat', sans-serif;
 }
 
-#timelineText, #timelineEvents, #timelineTitle, #nasaInfo {
-    color: white;
+.timelineText, #timelineEvents, .timelineTitle, #nasaInfo {
+    color: white !important;
     font-family: 'Montserrat', sans-serif;    
 }
 
@@ -127,23 +127,23 @@ img {vertical-align: middle;}
 #timelineEvents {
     margin-top: 50px;
 }
-
-#timelineTitle {
-    color: #a7a9ac;  
+/* color or titles */
+.timelineTitle { 
+    color: #a7a9ac !important;  
 }
 
 #nasaInfo, #spacexInfo {
     margin-left: 90px;
 }
 
-#titleNASA, #titleSpaceX, .titleData {
+.titleNASA, #titleSpaceX, .titleData {
     color: #a7a9ac;
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
     line-height: 2em;
 }
 
-#subtitleNASA, #subtitleSpaceX, .subtitleData {
+.subtitleNASA, #subtitleSpaceX, .subtitleData {
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
@@ -154,7 +154,7 @@ img {vertical-align: middle;}
     height: 550px;
 }
 
-#nasaLinks, #spacexLinks {
+.nasaLinks, .spacexLinks {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     color: white;
