@@ -1,4 +1,9 @@
-# spacex-nasa-flight-data-comparison\
+SpaceX/NASA Flight Data Comparison
+
+This interactive site will provide information about NASA, SpaceX and their relative flight data information. Explore the 
+history of NASA and SpaceX on the following pages with their interactive timelines that include links for additional organizational
+and mission detail. For in-depth details of select NASA flights and all SpaceX flights, pick a mission from the dropdown and click the link in 
+the data table.
 
 ---> User Story <---
 
