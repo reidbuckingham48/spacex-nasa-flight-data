@@ -18,31 +18,21 @@
 <body id="body">
   <!-- Navbar -->
   <div class="container">
+    <div class="buttons navbar navbar-item is-hoverable navbar-end" id="navbarImage" aria-label="main navigation">
+      <a href="./index.html" class="button navbtn">
+        Home
+      </a>
+      <a href="./nasa.html" class="button navbtn">
+        NASA Info
+      </a>
+      <a href="./spacex.html" class="button navbtn">
+        SpaceX Info
+      </a>
+      <a href="./data.html" class="button navbtn">
+    Mission Data
+      </a>
+  </div> 
 
-    <nav class="navbar" id="navbarImage" aria-label="main navigation"></nav> 
-  </div>
-
-  <div class="container">
-    <nav class="navbar is-mobile" id="navtop" aria-label="main navigation">
-      <div class="navbar-item is-hoverable navbar-end">
-        <div class="buttons has-addons">
-          <a href="./index.html" class="navbtn">
-            Home
-          </a>
-          <a href="./nasa.html" class="navbtn">
-            NASA Info
-          </a>
-          <a href="./spacex.html" class="navbtn">
-            SpaceX Info
-          </a>
-          <a href="./data.html" class="navbtn">
-        Mission Data
-          </a>
-
-        </div>
-      </div>
-
-    </nav>
     <section class="cd-h-timeline js-cd-h-timeline margin-bottom-md" id="timeline">
       <div class="cd-h-timeline__container container">
         <div class="cd-h-timeline__dates">
@@ -154,9 +144,8 @@
       </div> <!-- .cd-h-timeline__events -->
     </section>
 
-    <div class="columns is-mobile" id="nasaInfo">
-
-      <div class="column is-mobile">
+    <div class="columns spacexInfo">
+      <div class="column">
        <span class="title titleNASA">The Origins of SpaceX</span><br>
          <span class="subtitle subtitleNASA">Headquarters are in Hawthorne, California. SpaceX was formed by
           entrepreneur Elon Musk in the hopes of revolutionizing the aerospace industry and making affordable
@@ -183,7 +172,7 @@
                class="spacexLinks">SpaceX Wikipedia</a></b></span>
          </p>
      </div>
-     <div class="column is-moble" >
+     <div class="column spacexInfo">
        <img id="nasaImage" src="./IndexAssets/spaceXrocket.jpg" alt="Space X Rocket">
      </div>
    </div>
