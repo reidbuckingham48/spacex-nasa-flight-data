@@ -36,7 +36,7 @@ $('.submitSpacexBtn').click( function() {
         
         $('#article').empty();
         $('#article').html("<a href = '" + response.links.article + "'>" +response.links.article + "</a>"+ "<br>" +
-        "<a href = '" + response.links.webcast + "'>" +response.links.webcast + "</a>" )
+        "<a href = '" + response.links.webcast + "'>" + response.links.webcast + "</a>" )
 
         //query SpaceX for launchpad data for use in 'location' field as well as DarkSky API call
         $.get("https://api.spacexdata.com/v4/launchpads/" + response.launchpad).then(function(response) {
@@ -48,28 +48,28 @@ $('.submitSpacexBtn').click( function() {
       // query DarkSky for historic weather info table   
       
       // --- UNCOMMENT AND ADD API KEY FROM COMMENTS FOR HISTORIC WEATHER FUNCTIONALITY ---
-    //    var settings = {
-    //     "async": true,
-    //     "crossDomain": true,
-    //     "url": "https://dark-sky.p.rapidapi.com/"+ lat +"," + lon + "," + unixDate,
-    //     "method": "GET",
-    //     "headers": {
-    //         "x-rapidapi-host": "dark-sky.p.rapidapi.com",
-    //         "x-rapidapi-key": ""  //  <--- add API key here
-    //     }
-    // }
+       var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://dark-sky.p.rapidapi.com/"+ lat +"," + lon + "," + unixDate,
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "dark-sky.p.rapidapi.com",
+            "x-rapidapi-key": "67813d1ab1msh20677efa01c90afp193f66jsnc2e4e263c434"  //  <--- add API key here
+        }
+    }
 
-    // $.ajax(settings).done(function (response) {
-    //     console.log(response)
-    //     $('#temperature').empty();
-    //     $('#temperature').html(response.currently.temperature + '&deg' + "F")
+    $.ajax(settings).done(function (response) {
+        console.log(response)
+        $('#temperature').empty();
+        $('#temperature').html(response.currently.temperature + '&deg' + "F")
 
-    //     $('#humidity').empty();
-    //     $('#humidity').text(response.currently.humidity + '%')
+        $('#humidity').empty();
+        $('#humidity').text(response.currently.humidity*100 + '%')
 
-    //     $('#wind-speed').empty();
-    //     $('#wind-speed').text(response.currently.windSpeed + ' mph')
-    //     })
+        $('#wind-speed').empty();
+        $('#wind-speed').text(response.currently.windSpeed + ' mph')
+        })
     // --- END of historic weather functionality ---
 
         })
