@@ -1,4 +1,4 @@
-SpaceX/NASA Flight Data Comparison
+SpaceX/NASA Flight Data
 
 Link to Deployed Site: https://reidbuckingham48.github.io/spacex-nasa-flight-data/
 
