@@ -11,7 +11,7 @@ history of NASA and SpaceX on the following pages with their interactive timelin
 and mission detail. For in-depth details of select NASA flights and all SpaceX flights, pick a mission from the dropdown and click the link in 
 the data table.
 
-![image](https://user-images.githubusercontent.com/64329660/88992600-75730680-d2a9-11ea-8837-afb60443518b.png)
+![image](https://user-images.githubusercontent.com/64329660/89103915-144b5000-d3db-11ea-976f-30c9b636a248.png)
 
 ---> User Story <---
 
