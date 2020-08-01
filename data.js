@@ -11,6 +11,43 @@ function queryLaunches(){
         };
     })
 }
+// keylistener on submit button for nasa
+$('.submitNasaBtn').click( function() {
+    var nasaAPIKey = "l80wySp5TfuYjJnbHX16YApnaaudSSnfitERu55z";
+    var nasaURL = "https://api.nasa.gov/techport/api/projects?api_key=" + nasaAPIKey;
+    //query API for projects
+    $.ajax({
+    url: nasaURL,
+    method: "GET"
+    })
+//choose random project from response object
+.then(function(response) {   
+    var nasaProject = Math.floor(Math.random() * response.projects.projects.length);
+    var selectedProject = response.projects.projects[nasaProject].id
+    var nasaProjectURL = "https://api.nasa.gov/techport/api/projects/" + selectedProject + "?api_key="+ nasaAPIKey;
+    $.ajax({
+        url: nasaProjectURL,
+        method: "GET"
+        }).then(function(response) {
+        //populate fields for NASA project
+        $('#id').empty();
+        $('#id').text(response.project.id + "  " + response.project.title)
+
+        $('#startDate').empty();
+        $('#startDate').text(response.project.startDate)
+
+        $('#endDate').empty();
+        $('#endDate').text(response.project.endDate)
+
+        $('#description').empty();
+        $('#description').html(response.project.description)
+
+        $('#status').empty();
+        $('#status').text(response.project.status)
+        })
+    });
+})
+
 //submit button keylistener
 $('.submitSpacexBtn').click( function() {
     userChoice = (flightNum.value);
@@ -83,41 +120,5 @@ $('.submitSpacexBtn').click( function() {
         }); 
     })
 }); 
-// keylistener on submit button for nasa
-$('.submitNasaBtn').click( function() {
-    var nasaAPIKey = "l80wySp5TfuYjJnbHX16YApnaaudSSnfitERu55z";
-    var nasaURL = "https://api.nasa.gov/techport/api/projects?api_key=" + nasaAPIKey;
-    //query API for projects
-    $.ajax({
-    url: nasaURL,
-    method: "GET"
-    })
-//choose random project from response object
-.then(function(response) {   
-    var nasaProject = Math.floor(Math.random() * response.projects.projects.length);
-    var selectedProject = response.projects.projects[nasaProject].id
-    var nasaProjectURL = "https://api.nasa.gov/techport/api/projects/" + selectedProject + "?api_key="+ nasaAPIKey;
-    $.ajax({
-        url: nasaProjectURL,
-        method: "GET"
-        }).then(function(response) {
-        //populate fields for NASA project
-        $('#id').empty();
-        $('#id').text(response.project.id + "  " + response.project.title)
-
-        $('#startDate').empty();
-        $('#startDate').text(response.project.startDate)
-
-        $('#endDate').empty();
-        $('#endDate').text(response.project.endDate)
-
-        $('#description').empty();
-        $('#description').html(response.project.description)
-
-        $('#status').empty();
-        $('#status').text(response.project.status)
-        })
-    });
-})
 
 
