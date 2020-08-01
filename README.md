@@ -1,6 +1,8 @@
 SpaceX/NASA Flight Data Comparison
 
-Link to Deployed Site: https://reidbuckingham48.github.io/spacex-nasa-flight-data-comparison/
+Link to Deployed Site: https://reidbuckingham48.github.io/spacex-nasa-flight-data/
+
+Project Members: Jordan Benningfield, Aurora Brune, Reid Buckingham, Julie Schaub
 
 Technologies Used: HTML, Bulma, CSS, Javascript, jQuery, AJAX, API Calls NASA, SpaceX and DarkSky, moment.js
 
